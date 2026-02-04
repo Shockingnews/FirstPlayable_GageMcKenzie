@@ -1,0 +1,176 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\w0526843\\FirstPlayable_GageMcKenzie\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|c:\\users\\w0526843\\firstplayable_gagemckenzie\\firstplayable_gagemckenzie\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|solutionrelative:firstplayable_gagemckenzie\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|c:\\users\\w0526843\\firstplayable_gagemckenzie\\firstplayable_gagemckenzie\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|solutionrelative:firstplayable_gagemckenzie\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|c:\\users\\w0526843\\firstplayable_gagemckenzie\\firstplayable_gagemckenzie\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|solutionrelative:firstplayable_gagemckenzie\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|c:\\users\\w0526843\\firstplayable_gagemckenzie\\firstplayable_gagemckenzie\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|solutionrelative:firstplayable_gagemckenzie\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|c:\\users\\w0526843\\firstplayable_gagemckenzie\\firstplayable_gagemckenzie\\healthsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|solutionrelative:firstplayable_gagemckenzie\\healthsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|c:\\users\\w0526843\\firstplayable_gagemckenzie\\firstplayable_gagemckenzie\\mapfile.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|solutionrelative:firstplayable_gagemckenzie\\mapfile.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|c:\\users\\w0526843\\firstplayable_gagemckenzie\\firstplayable_gagemckenzie\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|solutionrelative:firstplayable_gagemckenzie\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|c:\\users\\w0526843\\firstplayable_gagemckenzie\\firstplayable_gagemckenzie\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|solutionrelative:firstplayable_gagemckenzie\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Position.cs",
+              "DocumentMoniker": "C:\\Users\\w0526843\\FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie\\Position.cs",
+              "RelativeDocumentMoniker": "FirstPlayable_GageMcKenzie\\Position.cs",
+              "ToolTip": "C:\\Users\\w0526843\\FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie\\Position.cs",
+              "RelativeToolTip": "FirstPlayable_GageMcKenzie\\Position.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T13:54:50.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Character.cs",
+              "DocumentMoniker": "C:\\Users\\w0526843\\FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie\\Character.cs",
+              "RelativeDocumentMoniker": "FirstPlayable_GageMcKenzie\\Character.cs",
+              "ToolTip": "C:\\Users\\w0526843\\FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie\\Character.cs",
+              "RelativeToolTip": "FirstPlayable_GageMcKenzie\\Character.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T12:48:32.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MapFile.txt",
+              "DocumentMoniker": "C:\\Users\\w0526843\\FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie\\MapFile.txt",
+              "RelativeDocumentMoniker": "FirstPlayable_GageMcKenzie\\MapFile.txt",
+              "ToolTip": "C:\\Users\\w0526843\\FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie\\MapFile.txt",
+              "RelativeToolTip": "FirstPlayable_GageMcKenzie\\MapFile.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-02-04T12:47:03.322Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HealthSystem.cs",
+              "DocumentMoniker": "C:\\Users\\w0526843\\FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie\\HealthSystem.cs",
+              "RelativeDocumentMoniker": "FirstPlayable_GageMcKenzie\\HealthSystem.cs",
+              "ToolTip": "C:\\Users\\w0526843\\FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie\\HealthSystem.cs",
+              "RelativeToolTip": "FirstPlayable_GageMcKenzie\\HealthSystem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T12:44:43.47Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Enemy.cs",
+              "DocumentMoniker": "C:\\Users\\w0526843\\FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie\\Enemy.cs",
+              "RelativeDocumentMoniker": "FirstPlayable_GageMcKenzie\\Enemy.cs",
+              "ToolTip": "C:\\Users\\w0526843\\FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie\\Enemy.cs",
+              "RelativeToolTip": "FirstPlayable_GageMcKenzie\\Enemy.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T12:41:48.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\w0526843\\FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie\\Player.cs",
+              "RelativeDocumentMoniker": "FirstPlayable_GageMcKenzie\\Player.cs",
+              "ToolTip": "C:\\Users\\w0526843\\FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie\\Player.cs",
+              "RelativeToolTip": "FirstPlayable_GageMcKenzie\\Player.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAwwCQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T12:41:28.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Map.cs",
+              "DocumentMoniker": "C:\\Users\\w0526843\\FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie\\Map.cs",
+              "RelativeDocumentMoniker": "FirstPlayable_GageMcKenzie\\Map.cs",
+              "ToolTip": "C:\\Users\\w0526843\\FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie\\Map.cs",
+              "RelativeToolTip": "FirstPlayable_GageMcKenzie\\Map.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T12:41:00.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\w0526843\\FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie\\Program.cs",
+              "RelativeDocumentMoniker": "FirstPlayable_GageMcKenzie\\Program.cs",
+              "ToolTip": "C:\\Users\\w0526843\\FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie\\Program.cs",
+              "RelativeToolTip": "FirstPlayable_GageMcKenzie\\Program.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAABAAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T12:37:11.154Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
