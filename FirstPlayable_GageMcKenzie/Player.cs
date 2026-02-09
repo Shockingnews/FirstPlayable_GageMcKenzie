@@ -11,9 +11,9 @@ namespace FirstPlayable_GageMcKenzie
         HealthSystem _health;
         HealthSystem _shield;
         string _name;
-        Position _currentPos;
+        public Position _currentPos;
         Position _lastPos;
-        public Player(int health, int shield, string name, int gold, Position currentPos)
+        public Player(int health, int shield, string name, int gold, Position currentPos, Position enemyPos)
         {
             _shield = new HealthSystem(shield);
             _health = new HealthSystem(health);
@@ -57,6 +57,11 @@ namespace FirstPlayable_GageMcKenzie
             Console.BackgroundColor = ConsoleColor.Blue;
             Console.Write(' ');
             Console.BackgroundColor = ConsoleColor.Black;
+
+        }
+
+        public void TakeDamage()
+        {
 
         }
         
