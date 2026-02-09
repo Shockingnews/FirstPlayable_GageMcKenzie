@@ -13,8 +13,10 @@ namespace FirstPlayable_GageMcKenzie
         
         static void Main(string[] args)
         {
-            Player player = new Player(new HealthSystem(100), new HealthSystem(50), "Gage", 0, new Position(0, 0));
-            player.Position();
+            Player player = new Player(100, 50, "Gage", 0, new Position(0, 0));
+            player.UpdatePlayer();
+            player.UpdatePlayer();
+            player.UpdatePlayer();
 
         }
 

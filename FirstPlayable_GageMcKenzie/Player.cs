@@ -13,20 +13,14 @@ namespace FirstPlayable_GageMcKenzie
         string _name;
         Position _currentPos;
         Position _lastPos;
-        public Player(HealthSystem health, HealthSystem shield, string name, int gold, Position currentPos)
+        public Player(int health, int shield, string name, int gold, Position currentPos)
         {
-            _shield = shield;
-            _health = health;
+            _shield = new HealthSystem(shield);
+            _health = new HealthSystem(health);
             _name = name;
             _currentPos = currentPos;
             _lastPos = currentPos;
 
-        }
-
-        public void Position()
-        {
-            Console.Write(_currentPos.x);
-            Console.Write(_currentPos.y);
         }
 
         public void Move()
@@ -34,11 +28,11 @@ namespace FirstPlayable_GageMcKenzie
             ConsoleKeyInfo playerInput = Console.ReadKey(true);
             if(playerInput.Key == ConsoleKey.W)
             {
-                _currentPos.y += 1;
+                _currentPos.y -= 1;
             }
             else if (playerInput.Key == ConsoleKey.S)
             {
-                _currentPos.y -= 1;
+                _currentPos.y += 1;
             }
             else if (playerInput.Key == ConsoleKey.A)
             {
@@ -49,8 +43,22 @@ namespace FirstPlayable_GageMcKenzie
                 _currentPos.x += 1;
             }
         }
+
+        public void UpdatePlayer()
+        {
+            Move();
+            DrawPlayer();
+            
+        }
+        public void DrawPlayer()
+        {
+            
+            Console.SetCursorPosition(_currentPos.x, _currentPos.y);
+            Console.BackgroundColor = ConsoleColor.Blue;
+            Console.Write(' ');
+            Console.BackgroundColor = ConsoleColor.Black;
+
+        }
         
-
-
     }
 }

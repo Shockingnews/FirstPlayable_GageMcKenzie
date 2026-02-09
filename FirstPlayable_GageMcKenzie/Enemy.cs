@@ -8,10 +8,21 @@ namespace FirstPlayable_GageMcKenzie
 {
     internal class Enemy : Character
     {
-        public Enemy(HealthSystem health, string name, int gold) 
+        HealthSystem _Health;
+        string _name;
+        int _gold;
+        Position _enemyPos;
+        Position _playerPos;
+        
+        public Enemy(int health, string name, int gold, Position enemyPos, Position playerPos) 
         {
+            _Health = new HealthSystem(health);
+            _name = name;
+            _gold = gold;
+            _playerPos = new Position(playerPos.x, playerPos.y);
+            _enemyPos = new Position(enemyPos.x, enemyPos.y);
 
         }
-
+        
     }
 }
