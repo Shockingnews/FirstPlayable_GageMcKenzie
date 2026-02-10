@@ -12,14 +12,14 @@ namespace FirstPlayable_GageMcKenzie
         string _name;
         int _gold;
         public Position _enemyPos;
-        Position _playerPos;
+        Player _player;
         
-        public Enemy(int health, string name, int gold, Position enemyPos, Position playerPos) 
+        public Enemy(int health, string name, int gold, Position enemyPos, Player player) 
         {
             _Health = new HealthSystem(health);
             _name = name;
             _gold = gold;
-            _playerPos = new Position(playerPos.x, playerPos.y);
+            _player =  player;
             _enemyPos = new Position(enemyPos.x, enemyPos.y);
 
         }
@@ -30,22 +30,22 @@ namespace FirstPlayable_GageMcKenzie
             int randomMovement = random.Next(1, 3);
             if(randomMovement == 1)
             {
-                if (_enemyPos.x > _playerPos.x)
+                if (_enemyPos.x > _player._currentPos.x)
                 {
                     _enemyPos.x -= 1;
                 }
-                else if (_enemyPos.x < _playerPos.x)
+                else if (_enemyPos.x < _player._currentPos.x)
                 {
                     _enemyPos.x += 1;
                 }
             }
             if(randomMovement == 2)
             {
-                if (_enemyPos.y > _playerPos.y)
+                if (_enemyPos.y > _player._currentPos.y)
                 {
                     _enemyPos.y -= 1;
                 }
-                else if (_enemyPos.y > _playerPos.y)
+                else if (_enemyPos.y > _player._currentPos.y)
                 {
                     _enemyPos.y += 1;
                 }
@@ -57,6 +57,7 @@ namespace FirstPlayable_GageMcKenzie
         public void UpdateEnemy()
         {
             Move();
+            TakeDamage();
             DrawEnemy();
         }
 
@@ -70,7 +71,10 @@ namespace FirstPlayable_GageMcKenzie
 
         public void TakeDamage()
         {
-            
+            if(_player._currentPos == _enemyPos)
+            {
+                _Health._health -= 10;
+            }
         }
         
     }

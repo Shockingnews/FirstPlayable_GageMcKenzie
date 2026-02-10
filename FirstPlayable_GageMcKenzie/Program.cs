@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,15 +10,15 @@ namespace FirstPlayable_GageMcKenzie
 {
     internal class Program
     {
-
+        static Map map = new Map(player, enemy);
         static Player player = new Player(100, 50, "Gage", 0, new Position(0, 0), enemy._enemyPos);
-        static Enemy enemy = new Enemy(5, "gabe", 5, new Position(5, 5), player._currentPos);
+        static Enemy enemy = new Enemy(5, "gabe", 5, new Position(5, 5), player);
         static void Main(string[] args)
         {
-            
-            
 
 
+
+            map.PrintMap();
             player.UpdatePlayer();
             enemy.UpdateEnemy();
             player.UpdatePlayer();

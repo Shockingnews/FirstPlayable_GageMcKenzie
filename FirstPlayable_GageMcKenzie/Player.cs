@@ -13,8 +13,10 @@ namespace FirstPlayable_GageMcKenzie
         string _name;
         public Position _currentPos;
         Position _lastPos;
-        public Player(int health, int shield, string name, int gold, Position currentPos, Position enemyPos)
+        Enemy _enemy;
+        public Player(int health, int shield, string name, int gold, Position currentPos, Position enemyPos, Enemy enemy)
         {
+            _enemy = enemy;
             _shield = new HealthSystem(shield);
             _health = new HealthSystem(health);
             _name = name;
@@ -47,6 +49,7 @@ namespace FirstPlayable_GageMcKenzie
         public void UpdatePlayer()
         {
             Move();
+            TakeDamage();
             DrawPlayer();
             
         }
@@ -62,8 +65,12 @@ namespace FirstPlayable_GageMcKenzie
 
         public void TakeDamage()
         {
-
+            if (_enemy._enemyPos == _currentPos)
+            {
+                _health._health -= 5;
+            }
         }
+        
         
     }
 }

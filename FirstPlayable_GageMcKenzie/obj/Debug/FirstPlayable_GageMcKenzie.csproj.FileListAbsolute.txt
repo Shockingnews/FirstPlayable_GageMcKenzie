@@ -6,3 +6,11 @@ C:\Users\w0526843\FirstPlayable_GageMcKenzie\FirstPlayable_GageMcKenzie\obj\Debu
 C:\Users\w0526843\FirstPlayable_GageMcKenzie\FirstPlayable_GageMcKenzie\obj\Debug\FirstPlayable_GageMcKenzie.exe
 C:\Users\w0526843\FirstPlayable_GageMcKenzie\FirstPlayable_GageMcKenzie\obj\Debug\FirstPlayable_GageMcKenzie.pdb
 C:\Users\w0526843\FirstPlayable_GageMcKenzie\FirstPlayable_GageMcKenzie\obj\Debug\FirstPlayable_GageMcKenzie.exe.config
+C:\Users\mgc72\Documents\unity project\challenge03-unitylevelmanagment-Shockingnews\FirstPlayable_GageMcKenzie\FirstPlayable_GageMcKenzie\bin\Debug\FirstPlayable_GageMcKenzie.exe.config
+C:\Users\mgc72\Documents\unity project\challenge03-unitylevelmanagment-Shockingnews\FirstPlayable_GageMcKenzie\FirstPlayable_GageMcKenzie\bin\Debug\FirstPlayable_GageMcKenzie.exe
+C:\Users\mgc72\Documents\unity project\challenge03-unitylevelmanagment-Shockingnews\FirstPlayable_GageMcKenzie\FirstPlayable_GageMcKenzie\bin\Debug\FirstPlayable_GageMcKenzie.pdb
+C:\Users\mgc72\Documents\unity project\challenge03-unitylevelmanagment-Shockingnews\FirstPlayable_GageMcKenzie\FirstPlayable_GageMcKenzie\obj\Debug\FirstPlayable_GageMcKenzie.csproj.AssemblyReference.cache
+C:\Users\mgc72\Documents\unity project\challenge03-unitylevelmanagment-Shockingnews\FirstPlayable_GageMcKenzie\FirstPlayable_GageMcKenzie\obj\Debug\FirstPlayable_GageMcKenzie.exe.config
+C:\Users\mgc72\Documents\unity project\challenge03-unitylevelmanagment-Shockingnews\FirstPlayable_GageMcKenzie\FirstPlayable_GageMcKenzie\obj\Debug\FirstPlayable_GageMcKenzie.csproj.CoreCompileInputs.cache
+C:\Users\mgc72\Documents\unity project\challenge03-unitylevelmanagment-Shockingnews\FirstPlayable_GageMcKenzie\FirstPlayable_GageMcKenzie\obj\Debug\FirstPlayable_GageMcKenzie.exe
+C:\Users\mgc72\Documents\unity project\challenge03-unitylevelmanagment-Shockingnews\FirstPlayable_GageMcKenzie\FirstPlayable_GageMcKenzie\obj\Debug\FirstPlayable_GageMcKenzie.pdb
