@@ -10,7 +10,7 @@ namespace FirstPlayable_GageMcKenzie
 {
     internal class Program
     {
-        //static Map map = new Map(player, enemy);
+        static Map map = new Map(player, enemy);
         public static bool alive = true;
         
         
@@ -26,6 +26,7 @@ namespace FirstPlayable_GageMcKenzie
             while (alive == true)
             {
                 Update();
+                
                 Console.ReadKey(true);
                 Console.Clear();
             }
@@ -33,7 +34,7 @@ namespace FirstPlayable_GageMcKenzie
 
         static void Draw()
         {
-
+            map.PrintMap();
         }
 
         static void Update()
@@ -42,10 +43,17 @@ namespace FirstPlayable_GageMcKenzie
             if(player._currentPos.x == enemy._enemyPos.x && player._currentPos.y == enemy._enemyPos.y)
             {
                 player.TakeDamage();
+                player.PreviousPos();
             }
             enemy.UpdateEnemy();
+            if (player._currentPos.x == enemy._enemyPos.x && player._currentPos.y == enemy._enemyPos.y)
+            {
+                enemy.TakeDamage();
+                enemy.PrePos();
+            }
             player.IsALive();
-            
+            Draw();
+
         }
     }
 }
