@@ -6,12 +6,18 @@ using System.Threading.Tasks;
 
 namespace FirstPlayable_GageMcKenzie
 {
-    internal class Character
+    internal abstract class Character
     {
-        HealthSystem _health;
-        string _name;
-        Position _pos;
-        
+        public HealthSystem _health;
+        public string _name;
+        public Position _pos;
+        public Character(int health, string name, int PosY, int PosX)
+        {
+            _health = new HealthSystem(health);
+            _name = name;
+            _pos.x = PosX;
+            _pos.y = PosY;
+        }
         
 
         

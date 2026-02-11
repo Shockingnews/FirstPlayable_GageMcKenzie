@@ -10,23 +10,42 @@ namespace FirstPlayable_GageMcKenzie
 {
     internal class Program
     {
-        static Map map = new Map(player, enemy);
-        static Player player = new Player(100, 50, "Gage", 0, new Position(0, 0), enemy._enemyPos);
-        static Enemy enemy = new Enemy(5, "gabe", 5, new Position(5, 5), player);
+        //static Map map = new Map(player, enemy);
+        public static bool alive = true;
+        
+        
+        static Player player = new Player(100, 50, "Gage", 0, 0, 0);
+        static Enemy enemy = new Enemy(5, "gabe", 5, 5, 5, player);
         static void Main(string[] args)
         {
+            Playing();
 
+        }
+        static void Playing()
+        {
+            while (alive == true)
+            {
+                Update();
+                Console.ReadKey(true);
+                Console.Clear();
+            }
+        }
 
-
-            map.PrintMap();
-            player.UpdatePlayer();
-            enemy.UpdateEnemy();
-            player.UpdatePlayer();
-            enemy.UpdateEnemy();
-            player.UpdatePlayer();
-            enemy.UpdateEnemy();
+        static void Draw()
+        {
 
         }
 
+        static void Update()
+        {
+            player.UpdatePlayer();
+            if(player._currentPos.x == enemy._enemyPos.x && player._currentPos.y == enemy._enemyPos.y)
+            {
+                player.TakeDamage();
+            }
+            enemy.UpdateEnemy();
+            player.IsALive();
+            
+        }
     }
 }
