@@ -27,18 +27,20 @@ namespace FirstPlayable_GageMcKenzie
             {
                 Update();
                 
-                Console.ReadKey(true);
-                Console.Clear();
+                
             }
         }
 
         static void Draw()
         {
+            Console.SetCursorPosition(0, 0);
             map.PrintMap();
         }
 
         static void Update()
         {
+            Draw();
+
             player.UpdatePlayer();
             if(player._currentPos.x == enemy._enemyPos.x && player._currentPos.y == enemy._enemyPos.y)
             {
@@ -52,8 +54,8 @@ namespace FirstPlayable_GageMcKenzie
                 enemy.PrePos();
             }
             player.IsALive();
-            Draw();
 
+            
         }
     }
 }

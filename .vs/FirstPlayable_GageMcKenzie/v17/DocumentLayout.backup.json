@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\mgc72\\Documents\\unity project\\challenge03-unitylevelmanagment-Shockingnews\\FirstPlayable_GageMcKenzie\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|C:\\Users\\mgc72\\Documents\\unity project\\challenge03-unitylevelmanagment-Shockingnews\\FirstPlayable_GageMcKenzie\\firstplayable_gagemckenzie\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|solutionrelative:firstplayable_gagemckenzie\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|C:\\Users\\mgc72\\Documents\\unity project\\challenge03-unitylevelmanagment-Shockingnews\\FirstPlayable_GageMcKenzie\\firstplayable_gagemckenzie\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|solutionrelative:firstplayable_gagemckenzie\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|c:\\users\\mgc72\\documents\\unity project\\challenge03-unitylevelmanagment-shockingnews\\firstplayable_gagemckenzie\\firstplayable_gagemckenzie\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|solutionrelative:firstplayable_gagemckenzie\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|C:\\Users\\mgc72\\Documents\\unity project\\challenge03-unitylevelmanagment-Shockingnews\\FirstPlayable_GageMcKenzie\\firstplayable_gagemckenzie\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|solutionrelative:firstplayable_gagemckenzie\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|C:\\Users\\mgc72\\Documents\\unity project\\challenge03-unitylevelmanagment-Shockingnews\\FirstPlayable_GageMcKenzie\\firstplayable_gagemckenzie\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|solutionrelative:firstplayable_gagemckenzie\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|C:\\Users\\mgc72\\Documents\\unity project\\challenge03-unitylevelmanagment-Shockingnews\\FirstPlayable_GageMcKenzie\\firstplayable_gagemckenzie\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|solutionrelative:firstplayable_gagemckenzie\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|C:\\Users\\mgc72\\Documents\\unity project\\challenge03-unitylevelmanagment-Shockingnews\\FirstPlayable_GageMcKenzie\\firstplayable_gagemckenzie\\mapfile.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -19,20 +31,8 @@
       "RelativeMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|solutionrelative:firstplayable_gagemckenzie\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|C:\\Users\\mgc72\\Documents\\unity project\\challenge03-unitylevelmanagment-Shockingnews\\FirstPlayable_GageMcKenzie\\firstplayable_gagemckenzie\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|solutionrelative:firstplayable_gagemckenzie\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|C:\\Users\\mgc72\\Documents\\unity project\\challenge03-unitylevelmanagment-Shockingnews\\FirstPlayable_GageMcKenzie\\firstplayable_gagemckenzie\\healthsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|solutionrelative:firstplayable_gagemckenzie\\healthsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|C:\\Users\\mgc72\\Documents\\unity project\\challenge03-unitylevelmanagment-Shockingnews\\FirstPlayable_GageMcKenzie\\firstplayable_gagemckenzie\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|solutionrelative:firstplayable_gagemckenzie\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|C:\\Users\\mgc72\\Documents\\unity project\\challenge03-unitylevelmanagment-Shockingnews\\FirstPlayable_GageMcKenzie\\firstplayable_gagemckenzie\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|solutionrelative:firstplayable_gagemckenzie\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,7 +62,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "MapFile.txt",
               "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\unity project\\challenge03-unitylevelmanagment-Shockingnews\\FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie\\MapFile.txt",
               "RelativeDocumentMoniker": "FirstPlayable_GageMcKenzie\\MapFile.txt",
@@ -70,12 +70,11 @@
               "RelativeToolTip": "FirstPlayable_GageMcKenzie\\MapFile.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2026-02-04T12:47:03.322Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-04T12:47:03.322Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "HealthSystem.cs",
               "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\unity project\\challenge03-unitylevelmanagment-Shockingnews\\FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie\\HealthSystem.cs",
               "RelativeDocumentMoniker": "FirstPlayable_GageMcKenzie\\HealthSystem.cs",
@@ -83,12 +82,11 @@
               "RelativeToolTip": "FirstPlayable_GageMcKenzie\\HealthSystem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T12:44:43.47Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-04T12:44:43.47Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Enemy.cs",
               "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\unity project\\challenge03-unitylevelmanagment-Shockingnews\\FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie\\Enemy.cs",
               "RelativeDocumentMoniker": "FirstPlayable_GageMcKenzie\\Enemy.cs",
@@ -96,12 +94,11 @@
               "RelativeToolTip": "FirstPlayable_GageMcKenzie\\Enemy.cs",
               "ViewState": "AgIAAD0AAAAAAAAAAAAIwGAAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T12:41:48.792Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-04T12:41:48.792Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\unity project\\challenge03-unitylevelmanagment-Shockingnews\\FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie\\Player.cs",
               "RelativeDocumentMoniker": "FirstPlayable_GageMcKenzie\\Player.cs",
@@ -114,45 +111,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Map.cs",
               "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\unity project\\challenge03-unitylevelmanagment-Shockingnews\\FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie\\Map.cs",
               "RelativeDocumentMoniker": "FirstPlayable_GageMcKenzie\\Map.cs",
               "ToolTip": "C:\\Users\\mgc72\\Documents\\unity project\\challenge03-unitylevelmanagment-Shockingnews\\FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie\\Map.cs",
               "RelativeToolTip": "FirstPlayable_GageMcKenzie\\Map.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBEAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-04T12:41:00.618Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\unity project\\challenge03-unitylevelmanagment-Shockingnews\\FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie\\Program.cs",
               "RelativeDocumentMoniker": "FirstPlayable_GageMcKenzie\\Program.cs",
               "ToolTip": "C:\\Users\\mgc72\\Documents\\unity project\\challenge03-unitylevelmanagment-Shockingnews\\FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie\\Program.cs",
               "RelativeToolTip": "FirstPlayable_GageMcKenzie\\Program.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwDYAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-04T12:37:11.154Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "Character.cs",
               "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\unity project\\challenge03-unitylevelmanagment-Shockingnews\\FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie\\Character.cs",
               "RelativeDocumentMoniker": "FirstPlayable_GageMcKenzie\\Character.cs",
               "ToolTip": "C:\\Users\\mgc72\\Documents\\unity project\\challenge03-unitylevelmanagment-Shockingnews\\FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie\\Character.cs",
               "RelativeToolTip": "FirstPlayable_GageMcKenzie\\Character.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T12:48:32.82Z"
+              "WhenOpened": "2026-02-04T12:48:32.82Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "Position.cs",
               "DocumentMoniker": "C:\\Users\\mgc72\\Documents\\unity project\\challenge03-unitylevelmanagment-Shockingnews\\FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie\\Position.cs",
               "RelativeDocumentMoniker": "FirstPlayable_GageMcKenzie\\Position.cs",
@@ -160,7 +158,8 @@
               "RelativeToolTip": "FirstPlayable_GageMcKenzie\\Position.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T13:54:50.956Z"
+              "WhenOpened": "2026-02-04T13:54:50.956Z",
+              "EditorCaption": ""
             }
           ]
         }

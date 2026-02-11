@@ -9,7 +9,7 @@ namespace FirstPlayable_GageMcKenzie
 {
     internal class Map
     {
-        // C:\Users\mgc72\Documents\unity project\challenge03-unitylevelmanagment-Shockingnews\FirstPlayable_GageMcKenzie\FirstPlayable_GageMcKenzie\MapFile.txt
+        
         static string _mapData = @"MapFile.txt";
         string[] _newMapData = File.ReadAllLines(_mapData);
         Player _player;
