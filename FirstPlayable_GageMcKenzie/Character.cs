@@ -8,18 +8,24 @@ namespace FirstPlayable_GageMcKenzie
 {
     internal abstract class Character
     {
-        public HealthSystem _health;
-        public string _name;
-        public Position _pos;
-        public Character(int health, string name, int PosY, int PosX)
+        public HealthSystem _systemHealth;
+        
+        public Character(int health)
         {
-            _health = new HealthSystem(health);
-            _name = name;
-            _pos.x = PosX;
-            _pos.y = PosY;
+            _systemHealth = new HealthSystem(health);
+            
         }
+        //public void Update()
+        //{
+        //    GetHealthSystem();
+        //}
         
+        //public void GetHealthSystem(HealthSystem healthSystem)
+        //{
 
-        
+        //}
+
+
+
     }
 }

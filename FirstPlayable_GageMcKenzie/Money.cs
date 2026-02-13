@@ -11,7 +11,7 @@ namespace FirstPlayable_GageMcKenzie
         public int gold;
         Position _moneyPos;
         Player _player;
-       List <bool> PickedUp = new List<bool>() {false,false,false };
+       List <bool> PickedUp = new List<bool>() {false,false,false,false,false };
 
         public Money(int Value,Player player) 
         { 
@@ -20,7 +20,7 @@ namespace FirstPlayable_GageMcKenzie
         }
         public void drawMoney()
         {
-            PlaceMoney(new List<int>() { 5, 10, 1 }, new List<int>() { 8, 7, 4 });
+            PlaceMoney(new List<int>() { 5, 10, 15,30, 32 }, new List<int>() { 8, 7, 5, 5,20});
         }
 
         public void PlaceMoney(List <int> xPos, List<int> yPos)
@@ -36,7 +36,7 @@ namespace FirstPlayable_GageMcKenzie
                     Console.Write('+');
                     Console.ForegroundColor = ConsoleColor.Black;
 
-                    if (_player._currentPos.x == _moneyPos.x && _player._currentPos.y == _moneyPos.y)
+                    if (_player.currentPos.x == _moneyPos.x && _player.currentPos.y == _moneyPos.y)
                     {
                         _player.money += gold;
                         PickedUp[i] = true;

@@ -30,6 +30,7 @@ namespace FirstPlayable_GageMcKenzie
             int bottem = 0;
             int mapPosy = 0;
             int mapPosx = 0;
+            Console.ForegroundColor = ConsoleColor.White;
             Console.Write('┌');
             for (int l = 0; l < _newMapData[0].Length; l++)
             {
@@ -130,9 +131,9 @@ namespace FirstPlayable_GageMcKenzie
             {
                 if (charInMap == '_')
                 {
-                    if (_player._currentPos.y == _border[i].Item2 && _player._currentPos.x == _border[i].Item1)
+                    if (_player.currentPos.y == _border[i].Item2 && _player.currentPos.x == _border[i].Item1)
                     {
-                        _player.TakeDamage();
+                        _player.TakeDamage(10);
                         _player.PreviousPos();
                         charInMap = ' ';
                     }
@@ -140,13 +141,13 @@ namespace FirstPlayable_GageMcKenzie
                         if (_enemy[j]._enemyPos.x == _border[i].Item2 && _enemy[j]._enemyPos.x == _border[i].Item1)
                         {
                             _enemy[j].PrePos();
-                            _enemy[j].TakeDamage();
+                            _enemy[j].TakeDamage(10);
                             charInMap = ' ';
                         }
                     }
                 }
 
-                if (_player._currentPos.y == _border[i].Item2 && _player._currentPos.x == _border[i].Item1)
+                if (_player.currentPos.y == _border[i].Item2 && _player.currentPos.x == _border[i].Item1)
                 {
                     
                     _player.PreviousPos();

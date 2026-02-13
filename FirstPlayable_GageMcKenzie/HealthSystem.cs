@@ -8,11 +8,17 @@ namespace FirstPlayable_GageMcKenzie
 {
     internal class HealthSystem
     {
-        public int _health;
-        public HealthSystem(int health)
+        public int health;
+        public HealthSystem(int Health)
         {
-            _health = health;
+            health = Health;
         }
+        public void TakeDamage(int damage)
+        {
+            health -= damage;
+        }
+
+        
 
     }
 }

@@ -12,10 +12,10 @@ namespace FirstPlayable_GageMcKenzie
     {
         
         public static int turns = 50;
+        static bool alive = true;
 
-        
-        
-        static Player player = new Player(100, 50, "Gage", 0, 5, 5);
+
+        static Player player = new Player(100, 50, "Gage", 0, 5, 5, alive);
         static List<Enemy> enemies = new List<Enemy>() 
         { 
             new Enemy(5, "Mason", 5, 11, 20, player),
@@ -29,12 +29,16 @@ namespace FirstPlayable_GageMcKenzie
         static Map map = new Map(player, enemies);
         static void Main(string[] args)
         {
+            Console.CursorVisible = false;
             Playing();
+            Console.WriteLine("Game Over");
+            Console.ReadKey(true);
+            Console.Clear();
 
         }
         static void Playing()
         {
-            while (turns != 0)
+            while (turns != 0 && player.IsALive() == true)
             {
                 Update();
                 
@@ -51,6 +55,7 @@ namespace FirstPlayable_GageMcKenzie
         static void Update()
         {
             
+            
             Draw();
             player.PlayerHud();
             gold.drawMoney();
@@ -59,19 +64,19 @@ namespace FirstPlayable_GageMcKenzie
             enemies[1].DrawEnemy();
 
             player.UpdatePlayer();
-            for (int i = 0; i < enemies.Count; i++)
+            for (int i = 0; i < enemies.Count(); i++)
             {
-                if (player._currentPos.x == enemies[i]._enemyPos.x && player._currentPos.y == enemies[i]._enemyPos.y)
+                if (player.currentPos.x == enemies[i]._enemyPos.x && player.currentPos.y == enemies[i]._enemyPos.y)
                 {
-                    player.TakeDamage();
+                    player.TakeDamage(5);
                     player.PreviousPos();
                     
                 }
                 map.CheckPos();
                 enemies[i].UpdateEnemy();
-                if (player._currentPos.x == enemies[i]._enemyPos.x && player._currentPos.y == enemies[i]._enemyPos.y)
+                if (player.currentPos.x == enemies[i]._enemyPos.x && player.currentPos.y == enemies[i]._enemyPos.y)
                 {
-                    enemies[i].TakeDamage();
+                    enemies[i].TakeDamage(10);
                     enemies[i].PrePos();
                     player.PreviousPos();
                 }
