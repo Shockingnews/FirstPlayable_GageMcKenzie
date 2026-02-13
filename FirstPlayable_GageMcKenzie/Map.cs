@@ -15,7 +15,7 @@ namespace FirstPlayable_GageMcKenzie
         Player _player;
         Enemy _enemy;
 
-        static int cursoerPosy;
+        static int borderPosX;
         static List<(int, int)> _border = new List<(int, int)>();
 
         public Map(Player player, Enemy enemy)
@@ -43,8 +43,8 @@ namespace FirstPlayable_GageMcKenzie
                 mapPosx += 1;
 
 
-                _border.Add((cursoerPosy, i));
-                _border.Add((cursoerPosy, i + 1));
+                _border.Add((borderPosX, i));
+                _border.Add((borderPosX, i + 1));
                 Console.Write('|');
                 for (int j = 0; j < _newMapData[i].Length; j++)
                 {
@@ -76,9 +76,16 @@ namespace FirstPlayable_GageMcKenzie
                     }
                     if (_newMapData[i][j] == '_')
                     {
-                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.Write(_newMapData[i][j]);
-                        
+                        if(_player._currentPos.y == j && _player._currentPos.x == i)
+                        {
+                            _player.TakeDamage();
+                        }
+                        if (_enemy._enemyPos.y == j && _enemy._enemyPos.x == i)
+                        {
+                            _enemy.TakeDamage();
+                        }
                         Console.ForegroundColor = ConsoleColor.White;
 
                     }
@@ -102,13 +109,13 @@ namespace FirstPlayable_GageMcKenzie
                     }
 
 
-                    cursoerPosy += 1;
+                    borderPosX += 1;
                 }
                 mapPosy = 0;
                 Console.WriteLine('|');
-                _border.Add((cursoerPosy + 1, i));
-                _border.Add((cursoerPosy + 1, i + 1));
-                cursoerPosy = 0;
+                _border.Add((borderPosX + 1, i));
+                _border.Add((borderPosX + 1, i + 1));
+                borderPosX = 0;
             }
             Console.Write('└');
             for (int l = 0; l < _newMapData[0].Length; l++)
@@ -118,6 +125,21 @@ namespace FirstPlayable_GageMcKenzie
             }
             Console.Write("┘");
 
+        }
+
+        public void CheckPos()
+        {
+            for (int i = 0; i < _border.Count(); i++)
+            {
+                if (_player._currentPos.y == _border[i].Item2 && _player._currentPos.x == _border[i].Item1)
+                {
+                    _player.PreviousPos();
+                }
+                if (_enemy._enemyPos.y == _border[i].Item2 && _enemy._enemyPos.y == _border[i].Item2)
+                {
+                    _enemy.PrePos();
+                }
+            }
         }
     }
 }

@@ -10,12 +10,14 @@ namespace FirstPlayable_GageMcKenzie
 {
     internal class Program
     {
-        static Map map = new Map(player, enemy);
+        
         public static bool alive = true;
         
         
         static Player player = new Player(100, 50, "Gage", 0, 0, 0);
         static Enemy enemy = new Enemy(5, "gabe", 5, 5, 5, player);
+
+        static Map map = new Map(player, enemy);
         static void Main(string[] args)
         {
             Playing();
@@ -47,12 +49,14 @@ namespace FirstPlayable_GageMcKenzie
                 player.TakeDamage();
                 player.PreviousPos();
             }
+            map.CheckPos();
             enemy.UpdateEnemy();
             if (player._currentPos.x == enemy._enemyPos.x && player._currentPos.y == enemy._enemyPos.y)
             {
                 enemy.TakeDamage();
                 enemy.PrePos();
             }
+            map.CheckPos();
             player.IsALive();
 
             
