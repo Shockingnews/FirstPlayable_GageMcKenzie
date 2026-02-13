@@ -47,6 +47,7 @@
     <Compile Include="Enemy.cs" />
     <Compile Include="HealthSystem.cs" />
     <Compile Include="Map.cs" />
+    <Compile Include="Money.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Position.cs" />
     <Compile Include="Program.cs" />

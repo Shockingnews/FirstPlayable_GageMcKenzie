@@ -17,6 +17,7 @@ namespace FirstPlayable_GageMcKenzie
 
         static int borderPosX;
         static List<(int, int)> _border = new List<(int, int)>();
+        static char charInMap;
 
         public Map(Player player, Enemy enemy)
         {
@@ -78,14 +79,18 @@ namespace FirstPlayable_GageMcKenzie
                     {
                         Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.Write(_newMapData[i][j]);
-                        if(_player._currentPos.y == j && _player._currentPos.x == i)
-                        {
-                            _player.TakeDamage();
-                        }
-                        if (_enemy._enemyPos.y == j && _enemy._enemyPos.x == i)
-                        {
-                            _enemy.TakeDamage();
-                        }
+                        charInMap = _newMapData[i][j];
+                        _border.Add((j + 1, i + 1));
+
+                        CheckPos();
+                        //if(_player._currentPos.y == j && _player._currentPos.x == i)
+                        //{
+                        //    _player.TakeDamage();
+                        //}
+                        //if (_enemy._enemyPos.y == j && _enemy._enemyPos.x == i)
+                        //{
+                        //    _enemy.TakeDamage();
+                        //}
                         Console.ForegroundColor = ConsoleColor.White;
 
                     }
@@ -123,7 +128,7 @@ namespace FirstPlayable_GageMcKenzie
                 Console.Write('-');
 
             }
-            Console.Write("┘");
+            Console.WriteLine("┘");
 
         }
 
@@ -131,14 +136,22 @@ namespace FirstPlayable_GageMcKenzie
         {
             for (int i = 0; i < _border.Count(); i++)
             {
-                if (_player._currentPos.y == _border[i].Item2 && _player._currentPos.x == _border[i].Item1)
+                if (charInMap == '_')
                 {
-                    _player.PreviousPos();
+                    if (_player._currentPos.y == _border[i].Item2 && _player._currentPos.x == _border[i].Item1)
+                    {
+                        _player.TakeDamage();
+                        _player.PreviousPos();
+                        charInMap = ' ';
+                    }
+                    if (_enemy._enemyPos.y == _border[i].Item2 && _enemy._enemyPos.x == _border[i].Item1)
+                    {
+                        _enemy.PrePos();
+                        _enemy.TakeDamage();
+                        charInMap = ' ';
+                    }
                 }
-                if (_enemy._enemyPos.y == _border[i].Item2 && _enemy._enemyPos.y == _border[i].Item2)
-                {
-                    _enemy.PrePos();
-                }
+                
             }
         }
     }

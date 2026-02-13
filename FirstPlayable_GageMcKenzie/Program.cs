@@ -11,11 +11,14 @@ namespace FirstPlayable_GageMcKenzie
     internal class Program
     {
         
-        public static bool alive = true;
+        public static int turns = 50;
+
         
         
-        static Player player = new Player(100, 50, "Gage", 0, 0, 0);
-        static Enemy enemy = new Enemy(5, "gabe", 5, 5, 5, player);
+        static Player player = new Player(100, 50, "Gage", 0, 5, 5);
+        static Enemy enemy = new Enemy(5, "gabe", 5, 10, 20, player);
+
+        static Money gold = new Money(1, player);
 
         static Map map = new Map(player, enemy);
         static void Main(string[] args)
@@ -25,7 +28,7 @@ namespace FirstPlayable_GageMcKenzie
         }
         static void Playing()
         {
-            while (alive == true)
+            while (turns != 0)
             {
                 Update();
                 
@@ -41,7 +44,12 @@ namespace FirstPlayable_GageMcKenzie
 
         static void Update()
         {
+            
             Draw();
+            player.PlayerHud();
+            gold.drawMoney();
+            player.DrawPlayer();
+            enemy.DrawEnemy();
 
             player.UpdatePlayer();
             if(player._currentPos.x == enemy._enemyPos.x && player._currentPos.y == enemy._enemyPos.y)
@@ -56,9 +64,11 @@ namespace FirstPlayable_GageMcKenzie
                 enemy.TakeDamage();
                 enemy.PrePos();
             }
-            map.CheckPos();
+            
             player.IsALive();
-
+            turns -= 0;
+            Console.Clear();
+            
             
         }
     }

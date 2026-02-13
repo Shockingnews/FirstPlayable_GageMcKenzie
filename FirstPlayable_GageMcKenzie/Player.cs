@@ -16,6 +16,7 @@ namespace FirstPlayable_GageMcKenzie
         public Position _currentPos = new Position();
         bool _alive = true;
         ConsoleKeyInfo _playerInput;
+        public int money;
 
 
 
@@ -29,7 +30,7 @@ namespace FirstPlayable_GageMcKenzie
             _name = name;
             _currentPos.x = currentPosX;
             _currentPos.y = currentPosY;
-            
+            money = gold;
 
         }
 
@@ -79,7 +80,7 @@ namespace FirstPlayable_GageMcKenzie
         {
             Move();
             DrawPlayer();
-            
+            IsALive();
         }
         public void DrawPlayer()
         {
@@ -102,6 +103,11 @@ namespace FirstPlayable_GageMcKenzie
                 _alive = false;
                 
             }
+        }
+
+        public void PlayerHud()
+        {
+            Console.WriteLine($"Player Name: Gage Health: {_currentHealth._health} Sheild: {_currentShield._health}  Gold: {money}");
         }
         
         
