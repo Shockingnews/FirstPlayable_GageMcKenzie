@@ -11,7 +11,7 @@ namespace FirstPlayable_GageMcKenzie
         public int gold;
         Position _moneyPos;
         Player _player;
-        bool PickedUp = false;
+       List <bool> PickedUp = new List<bool>() {false,false,false };
 
         public Money(int Value,Player player) 
         { 
@@ -20,33 +20,31 @@ namespace FirstPlayable_GageMcKenzie
         }
         public void drawMoney()
         {
-            CheckPlayerPos(_player._currentPos);
+            PlaceMoney(new List<int>() { 5, 10, 1 }, new List<int>() { 8, 7, 4 });
         }
 
-        public void PlaceMoney(int xPos,int yPos)
+        public void PlaceMoney(List <int> xPos, List<int> yPos)
         {
-            
-            
-            
-                _moneyPos.x = xPos;
-                _moneyPos.y = yPos;
-                Console.SetCursorPosition(_moneyPos.x, _moneyPos.y);
-                Console.ForegroundColor = ConsoleColor.DarkYellow;
-                Console.Write('+');
-                Console.ForegroundColor = ConsoleColor.Black;
-            
-        }
-        public void CheckPlayerPos(Position playerPos)
-        {
-            if (PickedUp == false)
+            for (int i = 0; i < xPos.Count; i++)
             {
-                PlaceMoney(5, 10);
-                if (playerPos.x == _moneyPos.x && playerPos.y == _moneyPos.y)
+                if (PickedUp[i] == false)
                 {
-                    _player.money += gold;
-                    PickedUp = true;
+                    _moneyPos.x = xPos[i];
+                    _moneyPos.y = yPos[i];
+                    Console.SetCursorPosition(_moneyPos.x, _moneyPos.y);
+                    Console.ForegroundColor = ConsoleColor.DarkYellow;
+                    Console.Write('+');
+                    Console.ForegroundColor = ConsoleColor.Black;
+
+                    if (_player._currentPos.x == _moneyPos.x && _player._currentPos.y == _moneyPos.y)
+                    {
+                        _player.money += gold;
+                        PickedUp[i] = true;
+                    }
                 }
             }
+            
         }
+        
     }
 }

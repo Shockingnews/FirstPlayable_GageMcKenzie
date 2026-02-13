@@ -40,10 +40,12 @@ namespace FirstPlayable_GageMcKenzie
                     if (_enemyPos.x > _player._currentPos.x)
                     {
                         _enemyPos.x -= 1;
+                        
                     }
                     else if (_enemyPos.x < _player._currentPos.x)
                     {
                         _enemyPos.x += 1;
+                        
                     }
                 }
                 if (_randomMovement == 2)
@@ -51,10 +53,12 @@ namespace FirstPlayable_GageMcKenzie
                     if (_enemyPos.y > _player._currentPos.y)
                     {
                         _enemyPos.y -= 1;
+                        
                     }
                     else if (_enemyPos.y < _player._currentPos.y)
                     {
                         _enemyPos.y += 1;
+                        
                     }
                 }
             }
@@ -98,11 +102,11 @@ namespace FirstPlayable_GageMcKenzie
             {
                 if (_enemyPos.y > _player._currentPos.y)
                 {
-                    _enemyPos.y += 1;
+                    _enemyPos.y = 1;
                 }
                 else if (_enemyPos.y < _player._currentPos.y)
                 {
-                    _enemyPos.y -= 1;
+                    _enemyPos.y = 1;
                 }
             }
         }

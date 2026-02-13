@@ -16,11 +16,17 @@ namespace FirstPlayable_GageMcKenzie
         
         
         static Player player = new Player(100, 50, "Gage", 0, 5, 5);
-        static Enemy enemy = new Enemy(5, "gabe", 5, 10, 20, player);
+        static List<Enemy> enemies = new List<Enemy>() 
+        { 
+            new Enemy(5, "Mason", 5, 11, 20, player),
+            new Enemy(5, "Gabe", 5, 15, 21, player),
+
+        };
+        
 
         static Money gold = new Money(1, player);
 
-        static Map map = new Map(player, enemy);
+        static Map map = new Map(player, enemies);
         static void Main(string[] args)
         {
             Playing();
@@ -49,20 +55,26 @@ namespace FirstPlayable_GageMcKenzie
             player.PlayerHud();
             gold.drawMoney();
             player.DrawPlayer();
-            enemy.DrawEnemy();
+            enemies[0].DrawEnemy();
+            enemies[1].DrawEnemy();
 
             player.UpdatePlayer();
-            if(player._currentPos.x == enemy._enemyPos.x && player._currentPos.y == enemy._enemyPos.y)
+            for (int i = 0; i < enemies.Count; i++)
             {
-                player.TakeDamage();
-                player.PreviousPos();
-            }
-            map.CheckPos();
-            enemy.UpdateEnemy();
-            if (player._currentPos.x == enemy._enemyPos.x && player._currentPos.y == enemy._enemyPos.y)
-            {
-                enemy.TakeDamage();
-                enemy.PrePos();
+                if (player._currentPos.x == enemies[i]._enemyPos.x && player._currentPos.y == enemies[i]._enemyPos.y)
+                {
+                    player.TakeDamage();
+                    player.PreviousPos();
+                    
+                }
+                map.CheckPos();
+                enemies[i].UpdateEnemy();
+                if (player._currentPos.x == enemies[i]._enemyPos.x && player._currentPos.y == enemies[i]._enemyPos.y)
+                {
+                    enemies[i].TakeDamage();
+                    enemies[i].PrePos();
+                    player.PreviousPos();
+                }
             }
             
             player.IsALive();
