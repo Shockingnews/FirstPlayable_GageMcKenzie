@@ -8,8 +8,7 @@ namespace FirstPlayable_GageMcKenzie
 {
     internal class Player : Character
     {
-        HealthSystem _maxHealth;
-        HealthSystem _maxShield;
+        
         HealthSystem _currentShield;
         HealthSystem _currentHealth;
         public string _name;
@@ -20,13 +19,11 @@ namespace FirstPlayable_GageMcKenzie
 
 
 
-        public Player(int maxHealth, int maxShield, string name, int gold, int currentPosX, int currentPosY, bool isAlive) : base(health: maxHealth)
+        public Player(int maxHealth, int maxShield, string name, int gold, int currentPosX, int currentPosY, bool isAlive) : base(health: maxHealth, shield: maxShield)
         {
             _alive = isAlive;
-            _maxShield = new HealthSystem(Health: maxShield);
-            _maxHealth = new HealthSystem(Health: maxHealth);
-            _currentHealth = _maxHealth;
-            _currentShield = _maxShield;
+            _currentHealth = new HealthSystem(Health: maxHealth);
+            _currentShield = new HealthSystem(Health: maxShield);
             _name = name;
             currentPos.x = currentPosX;
             currentPos.y = currentPosY;
@@ -92,17 +89,17 @@ namespace FirstPlayable_GageMcKenzie
 
         }
 
-        public void TakeDamage(int chooseDamage) 
+        public override void TakeDamage(int chooseDamage) 
         {
-            _currentHealth.TakeDamage(chooseDamage);
+            base.TakeDamage(chooseDamage: chooseDamage);
             
         }
         public bool IsALive()
         {
-            if(_currentHealth.health <= 0)
+            if(base.maxHealth.health <= 0)
             {
                 _alive = false;
-                _currentHealth.health = 0;
+                base.maxHealth.health = 0;
                 return false;
                 
             }
@@ -111,7 +108,7 @@ namespace FirstPlayable_GageMcKenzie
 
         public void PlayerHud()
         {
-            Console.WriteLine($"Player Name: {_name} Health: {_currentHealth.health} Sheild: {_currentShield.health}  Gold: {money}");
+            Console.WriteLine($"Player Name: {_name} Health: {base.maxHealth.health} Shield: {base.maxShield.health}  Gold: {money}");
         }
         
         

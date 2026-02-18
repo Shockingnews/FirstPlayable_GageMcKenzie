@@ -8,7 +8,8 @@ namespace FirstPlayable_GageMcKenzie
 {
     internal class Enemy : Character
     {
-        HealthSystem _Health;
+        
+        
         string _name;
         int _gold;
         public Position _enemyPos;
@@ -17,9 +18,9 @@ namespace FirstPlayable_GageMcKenzie
         bool _alive = true;
         int _randomMovement;
         
-        public Enemy(int health, string name, int gold, int enemyPosX, int enemyPosY, Player player) : base(health)
+        public Enemy(int maxHealth, int maxShield, string name, int gold, int enemyPosX, int enemyPosY, Player player) : base(health: maxHealth, shield: maxShield)
         {
-            _Health = new HealthSystem(Health: health);
+             
             _name = name;
             _gold = gold;
             _player =  player;
@@ -30,7 +31,7 @@ namespace FirstPlayable_GageMcKenzie
 
         public void Move()
         {
-            if (_Health.health != 0)
+            if (base.maxHealth.health != 0)
             {
                 _enemyPrePos = _enemyPos;
                 Random random = new Random();
@@ -52,12 +53,12 @@ namespace FirstPlayable_GageMcKenzie
                 {
                     if (_enemyPos.y > _player.currentPos.y)
                     {
-                        _enemyPos.y -= 1;
+                        _enemyPos.y += 1;
                         
                     }
                     else if (_enemyPos.y < _player.currentPos.y)
                     {
-                        _enemyPos.y += 1;
+                        _enemyPos.y -= 1;
                         
                     }
                 }
@@ -92,31 +93,34 @@ namespace FirstPlayable_GageMcKenzie
                 if (_enemyPos.x > _player.currentPos.x)
                 {
                     _enemyPos.x += 1;
+
                 }
                 else if (_enemyPos.x < _player.currentPos.x)
                 {
                     _enemyPos.x -= 1;
+
                 }
             }
             if (_randomMovement == 2)
             {
                 if (_enemyPos.y > _player.currentPos.y)
                 {
-                    _enemyPos.y = 1;
+                    _enemyPos.y -= 1;
+
                 }
                 else if (_enemyPos.y < _player.currentPos.y)
                 {
-                    _enemyPos.y = 1;
+                    _enemyPos.y += 1;
+
                 }
             }
         }
 
-        public void TakeDamage( int chooseDamage)
+        public override void TakeDamage(int chooseDamage)
         {
-            if(_player.currentPos.x == _enemyPos.x && _player.currentPos.y == _enemyPos.y)
-            {
-                _Health.TakeDamage(chooseDamage);
-            }
+            
+                base.TakeDamage(chooseDamage: chooseDamage);
+            
         }
         
     }

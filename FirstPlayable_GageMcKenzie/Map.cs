@@ -17,6 +17,7 @@ namespace FirstPlayable_GageMcKenzie
 
         static int borderPosX;
         static List<(int, int)> _border = new List<(int, int)>();
+        static List<(int, int)> _damageBorder = new List<(int, int)>();
         static char charInMap;
 
         public Map(Player player, List<Enemy> enemy)
@@ -81,7 +82,7 @@ namespace FirstPlayable_GageMcKenzie
                         Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.Write(_newMapData[i][j]);
                         charInMap = _newMapData[i][j];
-                        _border.Add((j + 1, i + 1));
+                        _damageBorder.Add((j + 1, i + 1));
 
                         CheckPos();
                         Console.ForegroundColor = ConsoleColor.White;
@@ -127,31 +128,32 @@ namespace FirstPlayable_GageMcKenzie
 
         public void CheckPos()
         {
-            for (int i = 0; i < _border.Count(); i++)
+            for (int i = 0; i < _damageBorder.Count(); i++)
             {
-                if (charInMap == '_')
-                {
-                    if (_player.currentPos.y == _border[i].Item2 && _player.currentPos.x == _border[i].Item1)
+                
+                    if (_player.currentPos.y == _damageBorder[i].Item2 && _player.currentPos.x == _damageBorder[i].Item1)
                     {
                         _player.TakeDamage(10);
                         _player.PreviousPos();
-                        charInMap = ' ';
+                        
                     }
                     for (int j = 0; j < _enemy.Count(); j++) {
-                        if (_enemy[j]._enemyPos.x == _border[i].Item2 && _enemy[j]._enemyPos.x == _border[i].Item1)
+                        if (_enemy[j]._enemyPos.x == _damageBorder[i].Item2 && _enemy[j]._enemyPos.x == _damageBorder[i].Item1)
                         {
                             _enemy[j].PrePos();
                             _enemy[j].TakeDamage(10);
-                            charInMap = ' ';
+                            
                         }
                     }
-                }
+            }
 
+            for (int i = 0; i < _border.Count(); i++)
+            {
                 if (_player.currentPos.y == _border[i].Item2 && _player.currentPos.x == _border[i].Item1)
                 {
-                    
+
                     _player.PreviousPos();
-                    
+
                 }
                 for (int j = 0; j < _enemy.Count(); j++)
                 {
@@ -160,11 +162,9 @@ namespace FirstPlayable_GageMcKenzie
                         _enemy[j].PrePos();
                     }
                 }
-
-
             }
-            
-            
+
+
         }
     }
 }

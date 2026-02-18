@@ -8,18 +8,26 @@ namespace FirstPlayable_GageMcKenzie
 {
     internal abstract class Character
     {
-        public HealthSystem _systemHealth;
+        public HealthSystem maxHealth;
+        public HealthSystem maxShield;
         
-        public Character(int health)
+        public Character(int health, int shield)
         {
-            _systemHealth = new HealthSystem(health);
-            
+            maxHealth = new HealthSystem(health);
+            maxShield = new HealthSystem(shield);
+
+        }
+
+        public virtual void TakeDamage(int chooseDamage)
+        {
+
+            maxHealth.health -= chooseDamage;
         }
         //public void Update()
         //{
         //    GetHealthSystem();
         //}
-        
+
         //public void GetHealthSystem(HealthSystem healthSystem)
         //{
 

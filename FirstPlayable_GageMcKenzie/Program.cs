@@ -18,8 +18,8 @@ namespace FirstPlayable_GageMcKenzie
         static Player player = new Player(100, 50, "Gage", 0, 5, 5, alive);
         static List<Enemy> enemies = new List<Enemy>() 
         { 
-            new Enemy(5, "Mason", 5, 11, 20, player),
-            new Enemy(5, "Gabe", 5, 15, 21, player),
+            new Enemy(5,0, "Mason", 5, 11, 20, player),
+            new Enemy(5,0, "Gabe", 5, 15, 21, player),
 
         };
         
@@ -30,17 +30,23 @@ namespace FirstPlayable_GageMcKenzie
         static void Main(string[] args)
         {
             Console.CursorVisible = false;
+
             Playing();
+
             Console.WriteLine("Game Over");
+
             Console.ReadKey(true);
+
             Console.Clear();
 
         }
         static void Playing()
         {
+            Draw();
             while (turns != 0 && player.IsALive() == true)
             {
                 Update();
+                
                 
                 
             }
@@ -50,18 +56,19 @@ namespace FirstPlayable_GageMcKenzie
         {
             Console.SetCursorPosition(0, 0);
             map.PrintMap();
+            player.PlayerHud();
+            gold.drawMoney();
+            player.DrawPlayer();
+            enemies[0].DrawEnemy();
+            enemies[1].DrawEnemy();
         }
 
         static void Update()
         {
             
             
-            Draw();
-            player.PlayerHud();
-            gold.drawMoney();
-            player.DrawPlayer();
-            enemies[0].DrawEnemy();
-            enemies[1].DrawEnemy();
+            
+            
 
             player.UpdatePlayer();
             for (int i = 0; i < enemies.Count(); i++)
@@ -85,8 +92,9 @@ namespace FirstPlayable_GageMcKenzie
             player.IsALive();
             turns -= 0;
             Console.Clear();
-            
-            
+            Draw();
+
+
         }
     }
 }

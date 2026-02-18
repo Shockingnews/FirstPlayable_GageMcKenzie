@@ -13,7 +13,7 @@ namespace FirstPlayable_GageMcKenzie
         Player _player;
        List <bool> PickedUp = new List<bool>() {false,false,false,false,false };
 
-        public Money(int Value,Player player) 
+        public Money(int Value, Player player) 
         { 
             gold = Value;
             _player = player;
@@ -40,6 +40,7 @@ namespace FirstPlayable_GageMcKenzie
                     {
                         _player.money += gold;
                         PickedUp[i] = true;
+                        _player.PreviousPos();
                     }
                 }
             }
