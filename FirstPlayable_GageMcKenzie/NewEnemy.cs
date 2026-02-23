@@ -6,23 +6,23 @@ using System.Threading.Tasks;
 
 namespace FirstPlayable_GageMcKenzie
 {
-    internal class Enemy : Character
+    internal class NewEnemy : Character
     {
-        
-        
+
+
         string _name;
         int _gold;
         public Position _enemyPos;
         Player _player;
         bool _alive = true;
         int _randomMovement;
-        
-        public Enemy(int maxHealth, int maxShield, string name, int gold, int enemyPosX, int enemyPosY, Player player) : base(health: maxHealth, shield: maxShield)
+
+        public NewEnemy(int maxHealth, int maxShield, string name, int gold, int enemyPosX, int enemyPosY, Player player) : base(health: maxHealth, shield: maxShield)
         {
-             
+
             _name = name;
             _gold = gold;
-            _player =  player;
+            _player = player;
             _enemyPos.x = enemyPosX;
             _enemyPos.y = enemyPosY;
 
@@ -32,20 +32,23 @@ namespace FirstPlayable_GageMcKenzie
         {
             if (base.maxHealth.health != 0)
             {
-                
+                if(_player.currentPos.x == _enemyPos.x)
+                {
+
+                }
                 Random random = new Random();
-                 _randomMovement = random.Next(1, 3);
+                _randomMovement = random.Next(1, 3);
                 if (_randomMovement == 1)
                 {
                     if (_enemyPos.x > _player.currentPos.x)
                     {
                         _enemyPos.x -= 1;
-                        
+
                     }
                     else if (_enemyPos.x < _player.currentPos.x)
                     {
                         _enemyPos.x += 1;
-                        
+
                     }
                 }
                 if (_randomMovement == 2)
@@ -53,17 +56,17 @@ namespace FirstPlayable_GageMcKenzie
                     if (_enemyPos.y > _player.currentPos.y)
                     {
                         _enemyPos.y -= 1;
-                        
+
                     }
                     else if (_enemyPos.y < _player.currentPos.y)
                     {
                         _enemyPos.y += 1;
-                        
+
                     }
                 }
             }
-            
-            
+
+
         }
 
         public void UpdateEnemy()
@@ -117,10 +120,9 @@ namespace FirstPlayable_GageMcKenzie
 
         public override void TakeDamage(int chooseDamage)
         {
-            
-                base.TakeDamage(chooseDamage: chooseDamage);
-            
+
+            base.TakeDamage(chooseDamage: chooseDamage);
+
         }
-        
     }
 }
