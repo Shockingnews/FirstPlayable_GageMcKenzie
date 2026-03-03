@@ -87,8 +87,8 @@ namespace FirstPlayable_GageMcKenzie
         public void DrawEnemy()
         {
             Console.SetCursorPosition(_enemyPos.x, _enemyPos.y);
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.Write('x');
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.Write('I');
             Console.ForegroundColor = ConsoleColor.White;
         }
 

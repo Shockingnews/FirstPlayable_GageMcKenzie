@@ -47,6 +47,7 @@
     <Compile Include="Enemy.cs" />
     <Compile Include="HealItem.cs" />
     <Compile Include="HealthSystem.cs" />
+    <Compile Include="IncreaseDamageItem.cs" />
     <Compile Include="Items.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="Money.cs" />
