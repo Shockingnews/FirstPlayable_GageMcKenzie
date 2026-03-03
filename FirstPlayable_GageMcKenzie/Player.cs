@@ -16,11 +16,13 @@ namespace FirstPlayable_GageMcKenzie
         bool _alive = true;
         ConsoleKeyInfo _playerInput;
         public int money;
+        int _damage;
 
 
 
-        public Player(int maxHealth, int maxShield, string name, int gold, int currentPosX, int currentPosY, bool isAlive) : base(health: maxHealth, shield: maxShield)
+        public Player(int maxHealth, int maxShield, string name, int gold, int currentPosX, int currentPosY, bool isAlive, int damage) : base(health: maxHealth, shield: maxShield)
         {
+            _damage = damage;
             _alive = isAlive;
             _currentHealth = new HealthSystem(Health: maxHealth);
             _currentShield = new HealthSystem(Health: maxShield);
@@ -93,6 +95,10 @@ namespace FirstPlayable_GageMcKenzie
         {
             base.TakeDamage(chooseDamage: chooseDamage);
             
+        }
+        public int Damage()
+        {
+            return _damage;
         }
         public bool IsALive()
         {

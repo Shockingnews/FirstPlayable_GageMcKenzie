@@ -22,6 +22,10 @@ namespace FirstPlayable_GageMcKenzie
             new Enemy(5,0, "Gabe", 5, 15, 21, player),
 
         };
+        static List<NewEnemy> newEnemies = new List<NewEnemy>()
+        {
+            new NewEnemy(maxHealth: 5,maxShield:0,name: "jerry", gold: 0, enemyPosX: 25, enemyPosY: 24, player: player)
+        };
         
 
         static Money gold = new Money(1, player);
@@ -61,6 +65,7 @@ namespace FirstPlayable_GageMcKenzie
             player.DrawPlayer();
             enemies[0].DrawEnemy();
             enemies[1].DrawEnemy();
+            newEnemies[0].DrawEnemy();
         }
 
         static void Update()
@@ -81,6 +86,7 @@ namespace FirstPlayable_GageMcKenzie
                 }
                 map.CheckPos();
                 enemies[i].UpdateEnemy();
+                newEnemies[0].UpdateEnemy();
                 if (player.currentPos.x == enemies[i]._enemyPos.x && player.currentPos.y == enemies[i]._enemyPos.y)
                 {
                     enemies[i].TakeDamage(10);
