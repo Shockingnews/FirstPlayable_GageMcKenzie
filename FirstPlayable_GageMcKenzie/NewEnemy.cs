@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace FirstPlayable_GageMcKenzie
 {
     internal class NewEnemy : Character
     {
 
-
+        int _damage;
         string _name;
         int _gold;
         public Position _enemyPos;
@@ -17,9 +18,9 @@ namespace FirstPlayable_GageMcKenzie
         bool _alive = true;
         int _randomMovement;
 
-        public NewEnemy(int maxHealth, int maxShield, string name, int gold, int enemyPosX, int enemyPosY, Player player) : base(health: maxHealth, shield: maxShield)
+        public NewEnemy(int maxHealth, int maxShield, string name, int gold, int enemyPosX, int enemyPosY, Player player, int damage) : base(health: maxHealth, shield: maxShield)
         {
-
+            _damage = damage;
             _name = name;
             _gold = gold;
             _player = player;
@@ -32,9 +33,9 @@ namespace FirstPlayable_GageMcKenzie
         {
             if (base.maxHealth.health != 0)
             {
-                if(_player.currentPos.x == _enemyPos.x + 3 || _player.currentPos.x == _enemyPos.x - 3)
+                if(_player.currentPos.x >= _enemyPos.x + 3 || _player.currentPos.x >= _enemyPos.x - 3)
                 {
-                    if (_player.currentPos.y == _enemyPos.y + 3 || _player.currentPos.y == _enemyPos.y - 3)
+                    if (_player.currentPos.y >= _enemyPos.y + 3 || _player.currentPos.y >= _enemyPos.y - 3)
                     {
                         Random random = new Random();
                         _randomMovement = random.Next(1, 3);
@@ -120,6 +121,10 @@ namespace FirstPlayable_GageMcKenzie
 
                 }
             }
+        }
+        public int Damage()
+        {
+            return _damage;
         }
 
         public override void TakeDamage(int chooseDamage)

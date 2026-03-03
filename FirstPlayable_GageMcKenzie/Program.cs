@@ -15,16 +15,16 @@ namespace FirstPlayable_GageMcKenzie
         static bool alive = true;
 
 
-        static Player player = new Player(100, 50, "Gage", 0, 5, 5, alive);
+        static Player player = new Player(100, 50, "Gage", 0, 5, 5, alive, 10);
         static List<Enemy> enemies = new List<Enemy>() 
         { 
             new Enemy(5,0, "Mason", 5, 11, 20, player),
-            new Enemy(5,0, "Gabe", 5, 15, 21, player),
+            
 
         };
         static List<NewEnemy> newEnemies = new List<NewEnemy>()
         {
-            new NewEnemy(maxHealth: 5,maxShield:0,name: "jerry", gold: 0, enemyPosX: 25, enemyPosY: 24, player: player)
+            new NewEnemy(maxHealth: 5,maxShield:0,name: "jerry", gold: 0, enemyPosX: 25, enemyPosY: 24, player: player, damage: 1)
         };
         
 
@@ -64,7 +64,7 @@ namespace FirstPlayable_GageMcKenzie
             gold.drawMoney();
             player.DrawPlayer();
             enemies[0].DrawEnemy();
-            enemies[1].DrawEnemy();
+            
             newEnemies[0].DrawEnemy();
         }
 
@@ -86,7 +86,7 @@ namespace FirstPlayable_GageMcKenzie
                 }
                 map.CheckPos();
                 enemies[i].UpdateEnemy();
-                newEnemies[0].UpdateEnemy();
+                
                 if (player.currentPos.x == enemies[i]._enemyPos.x && player.currentPos.y == enemies[i]._enemyPos.y)
                 {
                     enemies[i].TakeDamage(10);
@@ -94,7 +94,8 @@ namespace FirstPlayable_GageMcKenzie
                     player.PreviousPos();
                 }
             }
-            
+            newEnemies[0].UpdateEnemy();
+
             player.IsALive();
             turns -= 0;
             Console.Clear();

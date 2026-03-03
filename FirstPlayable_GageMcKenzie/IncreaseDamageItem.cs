@@ -9,11 +9,13 @@ namespace FirstPlayable_GageMcKenzie
     internal class IncreaseDamageItem : Items
     {
         int _numOfShieldItems;
+        int _damageIncrease;
         Player _player;
-        public IncreaseDamageItem(Player player, List<int> xPos, List<int> yPos, int numOfShields, char shieldLogo, ConsoleColor shieldColor) : base(player: player, posX: xPos, posY: yPos, numberOfItems: numOfShields, itemLogo: shieldLogo, itemColor: shieldColor)
+        public IncreaseDamageItem(Player player, List<int> xPos, List<int> yPos, int numOfShields, char shieldLogo, ConsoleColor shieldColor, int damageIncrease) : base(player: player, posX: xPos, posY: yPos, numberOfItems: numOfShields, itemLogo: shieldLogo, itemColor: shieldColor)
         {
             _numOfShieldItems = numOfShields;
             _player = player;
+            _damageIncrease = damageIncrease;
         }
 
         public override void PlaceItem()
@@ -23,7 +25,7 @@ namespace FirstPlayable_GageMcKenzie
             {
                 if (base.PickedUp[i] == true)
                 {
-                     
+                    _player.AddDamage(_damageIncrease);
                 }
             }
 

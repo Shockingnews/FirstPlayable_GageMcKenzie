@@ -100,6 +100,12 @@ namespace FirstPlayable_GageMcKenzie
         {
             return _damage;
         }
+
+        public void AddDamage(int addDamage)
+        {
+            _damage += addDamage;
+        }
+
         public bool IsALive()
         {
             if(base.maxHealth.health <= 0)
