@@ -43,8 +43,9 @@ namespace FirstPlayable_GageMcKenzie
                     _itemPos.y = _posY[i];
                     Console.SetCursorPosition(_itemPos.x, _itemPos.y);
                     Console.ForegroundColor = _itemColor;
-                    Console.Write('k');
-                   
+                    Console.Write(_itemLogo);
+                    Console.ForegroundColor = ConsoleColor.Black;
+
 
                     if (_player.currentPos.x == _itemPos.x && _player.currentPos.y == _itemPos.y)
                     {

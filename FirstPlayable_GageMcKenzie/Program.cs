@@ -24,8 +24,8 @@ namespace FirstPlayable_GageMcKenzie
 
         };
 
-        static ChestItem chest = new ChestItem(enemies, player, 1, new List<int>() { 15}, new List<int>() { 15 }, '#', ConsoleColor.DarkGray);
-        //static ShieldItem shieldItem = new ShieldItem(player, new List<int>(10), new List<int>(10), 1, '(', ConsoleColor.DarkCyan);
+        static ChestItem chest = new ChestItem(enemies, player, 1, new List<int>() { 16}, new List<int>() { 13 }, '#', ConsoleColor.DarkGray);
+        static ShieldItem shieldItem = new ShieldItem(player, new List<int>() { 10}, new List<int>() { 10}, 1, '(', ConsoleColor.DarkCyan);
         
         static GameHud gameHud = new GameHud( player, enemies);
         static List<NewEnemy> newEnemies = new List<NewEnemy>()
@@ -56,9 +56,16 @@ namespace FirstPlayable_GageMcKenzie
             while (turns != 0 && player.IsALive() == true)
             {
                 Update();
-                
-                
-                
+                for (int i = 0; i < enemies.Count(); i++)
+                {
+                    if (enemies[i]._alive == false)
+                    {
+                        turns = 0;
+                    }
+                }
+
+
+
             }
         }
 
@@ -67,8 +74,9 @@ namespace FirstPlayable_GageMcKenzie
             Console.SetCursorPosition(0, 0);
             map.PrintMap();
             player.PlayerHud();
-            
-            
+            gameHud.PlayerHud();
+            gameHud.EnemyHud();
+
             chest.PlaceItem();
             
             
