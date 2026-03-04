@@ -10,7 +10,7 @@ namespace FirstPlayable_GageMcKenzie
     {
         
         
-        string _name;
+        public string _name;
         int _gold;
         public Position _enemyPos;
         Player _player;
@@ -18,8 +18,10 @@ namespace FirstPlayable_GageMcKenzie
         int _randomMovement;
         int _damage;
         
-        public Enemy(int maxHealth, int maxShield, string name, int gold, int enemyPosX, int enemyPosY, Player player, int damage) : base(health: maxHealth, shield: maxShield)
+        public Enemy(int maxHealth, int maxShield, string name, int gold, int enemyPosX, int enemyPosY, Player player, int damage, bool isAlive) : base(health: maxHealth, shield: maxShield)
         {
+            _alive = isAlive;
+            _name = name;
             _damage = damage;
             _name = name;
             _gold = gold;
@@ -72,10 +74,14 @@ namespace FirstPlayable_GageMcKenzie
             if (_alive == true)
             {
                 Move();
-                TakeDamage(10);
+                
                 DrawEnemy();
+                if(base.maxHealth.health <= 0)
+                {
+                    _alive = false;
+                }
             }
-            else return;
+            
         }
 
         public virtual void DrawEnemy()
@@ -115,7 +121,7 @@ namespace FirstPlayable_GageMcKenzie
                 }
             }
         }
-        public int Damage()
+        public virtual int Damage()
         {
             return _damage;
         }
@@ -126,7 +132,7 @@ namespace FirstPlayable_GageMcKenzie
                 base.TakeDamage(chooseDamage: chooseDamage);
             
         }
-        public bool IsAlive()
+        public virtual bool IsAlive()
         {
             return _alive;
         }

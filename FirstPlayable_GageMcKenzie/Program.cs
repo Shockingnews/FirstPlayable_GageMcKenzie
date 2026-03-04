@@ -18,20 +18,22 @@ namespace FirstPlayable_GageMcKenzie
         static Player player = new Player(100, 50, "Gage", 0, 5, 5, alive, 10);
         static List<Enemy> enemies = new List<Enemy>() 
         { 
-            new Enemy(5,0, "Mason", 5, 11, 20, player,1),
+            new Enemy(5,0, "Mason", 5, 11, 20, player,1,true),
             new NewEnemy(maxHealth: 5,maxShield:0,name: "jerry", gold: 0, enemyPosX: 25, enemyPosY: 24, player: player, damage: 1),
             new ChunkyEnemy(maxHealth: 5, maxShield: 0,name: "Terry", gold: 0, enemyPosX: 27, enemyPosY: 24, player: player, damage: 1)
 
         };
 
-        static ChestItem chest = new ChestItem(enemies, player, 1, new List<int>() { 16}, new List<int>() { 13 }, '#', ConsoleColor.DarkGray);
-        static ShieldItem shieldItem = new ShieldItem(player, new List<int>() { 10}, new List<int>() { 10}, 1, '(', ConsoleColor.DarkCyan);
+        static List<Items> items = new List<Items>()
+        {
+            new ChestItem(enemies, player, 1, new List<int>() { 16}, new List<int>() { 13 }, '#', ConsoleColor.DarkGray),
+            new ShieldItem(player, new List<int>() { 10}, new List<int>() { 10}, 1, '(', ConsoleColor.DarkCyan)
+        };
+        //static ChestItem chest = new ChestItem(enemies, player, 1, new List<int>() { 16}, new List<int>() { 13 }, '#', ConsoleColor.DarkGray);
+        //static ShieldItem shieldItem = new ShieldItem(player, new List<int>() { 10}, new List<int>() { 10}, 1, '(', ConsoleColor.DarkCyan);
         
         static GameHud gameHud = new GameHud( player, enemies);
-        static List<NewEnemy> newEnemies = new List<NewEnemy>()
-        {
-            //new NewEnemy(maxHealth: 5,maxShield:0,name: "jerry", gold: 0, enemyPosX: 25, enemyPosY: 24, player: player, damage: 1)
-        };
+        
         
 
         static Money gold = new Money(1, player);
@@ -73,18 +75,24 @@ namespace FirstPlayable_GageMcKenzie
         {
             Console.SetCursorPosition(0, 0);
             map.PrintMap();
-            player.PlayerHud();
+            //player.PlayerHud();
             gameHud.PlayerHud();
             gameHud.EnemyHud();
 
-            chest.PlaceItem();
+            for(int i = 0; i < items.Count(); i++)
+            {
+                items[i].PlaceItem();
+            }
             
             
             gold.drawMoney();
             player.DrawPlayer();
-            enemies[0].DrawEnemy();
-            enemies[1].DrawEnemy();
-            enemies[2].DrawEnemy();
+            for (int i = 0; i < enemies.Count(); i++)
+            {
+                enemies[i].DrawEnemy();
+            }
+                
+            
 
             //newEnemies[0].DrawEnemy();
         }
@@ -113,6 +121,11 @@ namespace FirstPlayable_GageMcKenzie
                     enemies[i].TakeDamage(10);
                     enemies[i].PrePos();
                     player.PreviousPos();
+                }
+
+                if(enemies[i]._alive == false)
+                {
+                    enemies.Remove(enemies[i]);
                 }
             }
             //newEnemies[0].UpdateEnemy();

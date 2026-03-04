@@ -150,7 +150,7 @@ namespace FirstPlayable_GageMcKenzie
                         
                     }
                     for (int j = 0; j < _enemy.Count(); j++) {
-                        if (_enemy[j]._enemyPos.x == _damageBorder[i].Item2 && _enemy[j]._enemyPos.x == _damageBorder[i].Item1)
+                        if (_enemy[j]._enemyPos.y == _damageBorder[i].Item2 && _enemy[j]._enemyPos.x == _damageBorder[i].Item1)
                         {
                             _enemy[j].PrePos();
                             _enemy[j].TakeDamage(10);
@@ -169,7 +169,7 @@ namespace FirstPlayable_GageMcKenzie
                 }
                 for (int j = 0; j < _enemy.Count(); j++)
                 {
-                    if (_enemy[j]._enemyPos.x == _border[i].Item2 && _enemy[j]._enemyPos.x == _border[i].Item1)
+                    if (_enemy[j]._enemyPos.y == _border[i].Item2 && _enemy[j]._enemyPos.x == _border[i].Item1)
                     {
                         _enemy[j].PrePos();
                     }

@@ -15,10 +15,10 @@ namespace FirstPlayable_GageMcKenzie
         int _gold;
         public Position _enemyPos;
         Player _player;
-        bool _alive = true;
+        static bool _alive = true;
         
 
-        public NewEnemy(int maxHealth, int maxShield, string name, int gold, int enemyPosX, int enemyPosY, Player player, int damage) : base( maxHealth: maxHealth, maxShield: maxShield, name: name, gold: gold,enemyPosX: enemyPosX, enemyPosY: enemyPosY, player: player, damage: damage)
+        public NewEnemy(int maxHealth, int maxShield, string name, int gold, int enemyPosX, int enemyPosY, Player player, int damage) : base( maxHealth: maxHealth, maxShield: maxShield, name: name, gold: gold,enemyPosX: enemyPosX, enemyPosY: enemyPosY, player: player, damage: damage, isAlive: _alive)
         {
             //_damage = damage;
             //_name = name;
@@ -90,39 +90,39 @@ namespace FirstPlayable_GageMcKenzie
 
         public override void PrePos()
         {
-            base.PrePos();
+            
 
-            //if (_randomMovement == 1)
-            //{
-            //    if (_enemyPos.x > _player.currentPos.x)
-            //    {
-            //        _enemyPos.x += 1;
+            
+                if (_enemyPos.x > _player.currentPos.x)
+                {
+                    _enemyPos.x += 1;
 
-            //    }
-            //    else if (_enemyPos.x < _player.currentPos.x)
-            //    {
-            //        _enemyPos.x -= 1;
+                }
+                else if (_enemyPos.x < _player.currentPos.x)
+                {
+                    _enemyPos.x -= 1;
 
-            //    }
-            //}
-            //if (_randomMovement == 2)
-            //{
-            //    if (_enemyPos.y > _player.currentPos.y)
-            //    {
-            //        _enemyPos.y += 1;
+                }
+            
+            
+                if (_enemyPos.y > _player.currentPos.y)
+                {
+                    _enemyPos.y += 1;
 
-            //    }
-            //    else if (_enemyPos.y < _player.currentPos.y)
-            //    {
-            //        _enemyPos.y -= 1;
+                }
+                else if (_enemyPos.y < _player.currentPos.y)
+                {
+                    _enemyPos.y -= 1;
 
-            //    }
-            //}
+                }
+            
         }
-        //public int Damage()
-        //{
-        //    return _damage;
-        //}
+
+
+        public override int Damage()
+        {
+           return base.Damage();
+        }
 
         //public override void TakeDamage(int chooseDamage)
         //{
@@ -130,5 +130,9 @@ namespace FirstPlayable_GageMcKenzie
         //    base.TakeDamage(chooseDamage: chooseDamage);
 
         //}
+        public override bool IsAlive()
+        {
+            return base.IsAlive();
+        }
     }
 }
