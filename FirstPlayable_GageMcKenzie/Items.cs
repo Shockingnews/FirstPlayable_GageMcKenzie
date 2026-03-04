@@ -51,6 +51,7 @@ namespace FirstPlayable_GageMcKenzie
                     {
                         
                         PickedUp[i] = true;
+                        //PickedUp.Remove(PickedUp[i]);
                         _player.PreviousPos();
                     }
                 }

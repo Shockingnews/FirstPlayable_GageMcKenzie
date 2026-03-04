@@ -17,20 +17,25 @@ namespace FirstPlayable_GageMcKenzie
 
         static Player player = new Player(100, 50, "Gage", 0, 5, 5, alive, 10);
         static List<Enemy> enemies = new List<Enemy>() 
-        { 
-            new Enemy(5,0, "Mason", 5, 11, 20, player,1,true),
-            new NewEnemy(maxHealth: 5,maxShield:0,name: "jerry", gold: 0, enemyPosX: 25, enemyPosY: 24, player: player, damage: 1),
-            new ChunkyEnemy(maxHealth: 5, maxShield: 0,name: "Terry", gold: 0, enemyPosX: 27, enemyPosY: 24, player: player, damage: 1)
+        {
+            //new BasicEnemy(maxHealth: 5,maxShield:0,name: "jerry", gold: 0, enemyPosX: 25, enemyPosY: 24, player: player, damage: 1),
+            new Enemy(maxHealth: 5, maxShield: 0, name:"Basic", enemyPosX: 30, enemyPosY: 20, player: player, damage: 1, isAlive: true, enemyLogo: 'x', color: ConsoleColor.Red),
+            new Enemy(maxHealth: 5, maxShield: 0, name:"Basic", enemyPosX: 11, enemyPosY: 20, player: player, damage: 1, isAlive: true, enemyLogo: 'x', color: ConsoleColor.Red),
+            new Enemy(maxHealth: 5,maxShield:0,name: "Attacker", enemyPosX: 10, enemyPosY: 24, player: player, damage: 10,isAlive: true,enemyLogo: 'I', color: ConsoleColor.Red),
+            new Enemy(maxHealth: 5,maxShield:0,name: "Attacker", enemyPosX: 30, enemyPosY: 20, player: player, damage: 10,isAlive: true,enemyLogo: 'I', color: ConsoleColor.Red),
+            new Enemy(maxHealth: 10, maxShield: 0,name: "Heavy", enemyPosX: 27, enemyPosY: 5, player: player, damage: 5, isAlive: true,enemyLogo: '@', color: ConsoleColor.Red),
+            new Enemy(maxHealth: 10, maxShield: 0,name: "Heavy", enemyPosX: 30, enemyPosY: 5, player: player, damage: 5, isAlive: true,enemyLogo: '@', color: ConsoleColor.Red)
 
         };
 
         static List<Items> items = new List<Items>()
         {
             new ChestItem(enemies, player, 1, new List<int>() { 16}, new List<int>() { 13 }, '#', ConsoleColor.DarkGray),
-            new ShieldItem(player, new List<int>() { 10}, new List<int>() { 10}, 1, '(', ConsoleColor.DarkCyan)
+            new ShieldItem(player, new List<int>() { 15,5}, new List<int>() { 10,19}, 2, '(', ConsoleColor.DarkCyan),
+            new HealItem(player, new List<int>() { 20,30}, new List<int>() { 10,1}, 2, 'H', ConsoleColor.DarkGreen),
+            
         };
-        //static ChestItem chest = new ChestItem(enemies, player, 1, new List<int>() { 16}, new List<int>() { 13 }, '#', ConsoleColor.DarkGray);
-        //static ShieldItem shieldItem = new ShieldItem(player, new List<int>() { 10}, new List<int>() { 10}, 1, '(', ConsoleColor.DarkCyan);
+        
         
         static GameHud gameHud = new GameHud( player, enemies);
         
@@ -44,8 +49,13 @@ namespace FirstPlayable_GageMcKenzie
             Console.CursorVisible = false;
 
             Playing();
-
-            Console.WriteLine("Game Over");
+            Console.Clear();
+            if (player.IsALive() == false)
+            {
+                Console.WriteLine("Game Over");
+            }
+            else { Console.WriteLine("You Win"); }
+            
 
             Console.ReadKey(true);
 
@@ -75,7 +85,7 @@ namespace FirstPlayable_GageMcKenzie
         {
             Console.SetCursorPosition(0, 0);
             map.PrintMap();
-            //player.PlayerHud();
+            
             gameHud.PlayerHud();
             gameHud.EnemyHud();
 
@@ -94,7 +104,7 @@ namespace FirstPlayable_GageMcKenzie
                 
             
 
-            //newEnemies[0].DrawEnemy();
+            
         }
 
         static void Update()
@@ -128,7 +138,7 @@ namespace FirstPlayable_GageMcKenzie
                     enemies.Remove(enemies[i]);
                 }
             }
-            //newEnemies[0].UpdateEnemy();
+            
 
             player.IsALive();
             turns -= 0;

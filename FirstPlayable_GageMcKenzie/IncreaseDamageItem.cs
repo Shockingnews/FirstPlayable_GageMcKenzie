@@ -26,6 +26,7 @@ namespace FirstPlayable_GageMcKenzie
                 if (base.PickedUp[i] == true)
                 {
                     _player.AddDamage(_damageIncrease);
+                   
                 }
             }
             base.PlaceItem();

@@ -19,12 +19,16 @@ namespace FirstPlayable_GageMcKenzie
 
         public override void PlaceItem()
         {
+            
             base.PlaceItem();
             for (int i = 0; i < _numOfShieldItems; i++)
             {
                 if (base.PickedUp[i] == true)
                 {
-                    _player.maxShield.health += 1;
+                    
+                        _player.maxShield.health += 1;
+                    
+                    
                 }
             }
             

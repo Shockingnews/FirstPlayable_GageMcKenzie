@@ -11,20 +11,25 @@ namespace FirstPlayable_GageMcKenzie
         
         
         public string _name;
-        int _gold;
+        
         public Position _enemyPos;
         Player _player;
         public bool _alive = true;
         int _randomMovement;
         int _damage;
-        
-        public Enemy(int maxHealth, int maxShield, string name, int gold, int enemyPosX, int enemyPosY, Player player, int damage, bool isAlive) : base(health: maxHealth, shield: maxShield)
+        char _enemyLogo;
+        ConsoleColor _color;
+
+
+        public Enemy(int maxHealth, int maxShield, string name, int enemyPosX, int enemyPosY, Player player, int damage, bool isAlive, char enemyLogo, ConsoleColor color) : base(health: maxHealth, shield: maxShield)
         {
+            _color = color;
+            _enemyLogo = enemyLogo;
             _alive = isAlive;
             _name = name;
             _damage = damage;
             _name = name;
-            _gold = gold;
+            
             _player =  player;
             _enemyPos.x = enemyPosX;
             _enemyPos.y = enemyPosY;
@@ -35,33 +40,35 @@ namespace FirstPlayable_GageMcKenzie
         {
             if (base.maxHealth.health != 0)
             {
-                
-                Random random = new Random();
-                 _randomMovement = random.Next(1, 3);
-                if (_randomMovement == 1)
+                if (_enemyPos.x <= _player.currentPos.x + 3 && _enemyPos.x >= _player.currentPos.x - 3 || _enemyPos.x <= _player.currentPos.y + 3 && _enemyPos.x >= _player.currentPos.y - 3)
                 {
-                    if (_enemyPos.x > _player.currentPos.x)
+                    Random random = new Random();
+                    _randomMovement = random.Next(1, 3);
+                    if (_randomMovement == 1)
                     {
-                        _enemyPos.x -= 1;
-                        
+                        if (_enemyPos.x > _player.currentPos.x)
+                        {
+                            _enemyPos.x -= 1;
+
+                        }
+                        else if (_enemyPos.x < _player.currentPos.x)
+                        {
+                            _enemyPos.x += 1;
+
+                        }
                     }
-                    else if (_enemyPos.x < _player.currentPos.x)
+                    if (_randomMovement == 2)
                     {
-                        _enemyPos.x += 1;
-                        
-                    }
-                }
-                if (_randomMovement == 2)
-                {
-                    if (_enemyPos.y > _player.currentPos.y)
-                    {
-                        _enemyPos.y -= 1;
-                        
-                    }
-                    else if (_enemyPos.y < _player.currentPos.y)
-                    {
-                        _enemyPos.y += 1;
-                        
+                        if (_enemyPos.y > _player.currentPos.y)
+                        {
+                            _enemyPos.y -= 1;
+
+                        }
+                        else if (_enemyPos.y < _player.currentPos.y)
+                        {
+                            _enemyPos.y += 1;
+
+                        }
                     }
                 }
             }
@@ -87,8 +94,8 @@ namespace FirstPlayable_GageMcKenzie
         public virtual void DrawEnemy()
         {
             Console.SetCursorPosition(_enemyPos.x, _enemyPos.y);
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.Write('x');
+            Console.ForegroundColor = _color;
+            Console.Write(_enemyLogo);
             Console.ForegroundColor = ConsoleColor.White;
         }
 

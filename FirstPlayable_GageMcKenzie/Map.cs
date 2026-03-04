@@ -19,14 +19,14 @@ namespace FirstPlayable_GageMcKenzie
         static List<(int, int)> _border = new List<(int, int)>();
         static List<(int, int)> _damageBorder = new List<(int, int)>();
         static char charInMap;
-        static Dictionary<char, ConsoleColor> mapChars = new Dictionary<char, ConsoleColor>()
-        {
-            {'`', ConsoleColor.Green},
-            {'~', ConsoleColor.Blue},
-            {'^', ConsoleColor.White},
-            {'*', ConsoleColor.Yellow},
-            {'_', ConsoleColor.DarkRed}
-        };
+        //static Dictionary<char, ConsoleColor> mapChars = new Dictionary<char, ConsoleColor>()
+        //{
+        //    {'`', ConsoleColor.Green},
+        //    {'~', ConsoleColor.Blue},
+        //    {'^', ConsoleColor.White},
+        //    {'*', ConsoleColor.Yellow},
+        //    {'_', ConsoleColor.DarkRed}
+        //};
 
         public Map(Player player, List<Enemy> enemy)
         {
@@ -36,6 +36,7 @@ namespace FirstPlayable_GageMcKenzie
 
         public void PrintMap()
         {
+            
             int bottem = 0;
             int mapPosy = 0;
             int mapPosx = 0;
@@ -63,7 +64,7 @@ namespace FirstPlayable_GageMcKenzie
 
                     mapPosy += 1;
 
-                    mapChars.ContainsKey('~');
+                    
 
                     if (_newMapData[i][j] == '`')
                     {
