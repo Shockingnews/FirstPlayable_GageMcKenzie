@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|solutionrelative:firstplayable_gagemckenzie\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|c:\\users\\mgc72\\documents\\unity project\\challenge03-unitylevelmanagment-shockingnews\\firstplayable_gagemckenzie\\firstplayable_gagemckenzie\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|C:\\Users\\mgc72\\Documents\\unity project\\challenge03-unitylevelmanagment-Shockingnews\\FirstPlayable_GageMcKenzie\\firstplayable_gagemckenzie\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5EB19922-96D7-40C1-A63D-005222AF6B77}|FirstPlayable_GageMcKenzie\\FirstPlayable_GageMcKenzie.csproj|solutionrelative:firstplayable_gagemckenzie\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -98,8 +98,7 @@
               "RelativeToolTip": "FirstPlayable_GageMcKenzie\\Enemy.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAAACoAAABnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T12:41:48.792Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-04T12:41:48.792Z"
             },
             {
               "$type": "Document",
@@ -111,8 +110,7 @@
               "RelativeToolTip": "FirstPlayable_GageMcKenzie\\Program.cs",
               "ViewState": "AgIAAC0AAAAAAAAAAAAAADMAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T12:37:11.154Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-04T12:37:11.154Z"
             },
             {
               "$type": "Document",
@@ -124,8 +122,7 @@
               "RelativeToolTip": "FirstPlayable_GageMcKenzie\\Money.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAQwC8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-13T15:17:34.329Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-13T15:17:34.329Z"
             },
             {
               "$type": "Document",
@@ -150,8 +147,7 @@
               "RelativeToolTip": "FirstPlayable_GageMcKenzie\\HealthSystem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T12:44:43.47Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-04T12:44:43.47Z"
             },
             {
               "$type": "Document",
@@ -163,8 +159,7 @@
               "RelativeToolTip": "FirstPlayable_GageMcKenzie\\Player.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAAqwHgAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T12:41:28.204Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-04T12:41:28.204Z"
             },
             {
               "$type": "Document",
@@ -176,8 +171,7 @@
               "RelativeToolTip": "FirstPlayable_GageMcKenzie\\Map.cs",
               "ViewState": "AgIAAIYAAAAAAAAAAAAAAH4AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T12:41:00.618Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-04T12:41:00.618Z"
             },
             {
               "$type": "Document",
@@ -189,8 +183,7 @@
               "RelativeToolTip": "FirstPlayable_GageMcKenzie\\ChestIteam.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAiwBQAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T15:09:27.286Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-04T15:09:27.286Z"
             },
             {
               "$type": "Document",
@@ -202,8 +195,7 @@
               "RelativeToolTip": "FirstPlayable_GageMcKenzie\\GameHud.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAowBwAAADtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T15:34:39.206Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-04T15:34:39.206Z"
             },
             {
               "$type": "Document",
@@ -215,8 +207,7 @@
               "RelativeToolTip": "FirstPlayable_GageMcKenzie\\Items.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAAACMAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-23T13:18:47.217Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-23T13:18:47.217Z"
             },
             {
               "$type": "Document",
@@ -228,8 +219,7 @@
               "RelativeToolTip": "FirstPlayable_GageMcKenzie\\ShieldItem.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T13:51:21.397Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T13:51:21.397Z"
             },
             {
               "$type": "Document",
@@ -241,8 +231,7 @@
               "RelativeToolTip": "FirstPlayable_GageMcKenzie\\Character.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T12:48:32.82Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-04T12:48:32.82Z"
             },
             {
               "$type": "Document",
@@ -254,8 +243,7 @@
               "RelativeToolTip": "FirstPlayable_GageMcKenzie\\HealItem.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-23T13:40:17.689Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-23T13:40:17.689Z"
             },
             {
               "$type": "Document",
@@ -267,8 +255,7 @@
               "RelativeToolTip": "FirstPlayable_GageMcKenzie\\IncreaseDamageItem.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABwAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T01:07:54.792Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-03T01:07:54.792Z"
             },
             {
               "$type": "Document",
