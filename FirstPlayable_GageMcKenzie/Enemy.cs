@@ -14,12 +14,13 @@ namespace FirstPlayable_GageMcKenzie
         int _gold;
         public Position _enemyPos;
         Player _player;
-        bool _alive = true;
+        public bool _alive = true;
         int _randomMovement;
+        int _damage;
         
-        public Enemy(int maxHealth, int maxShield, string name, int gold, int enemyPosX, int enemyPosY, Player player) : base(health: maxHealth, shield: maxShield)
+        public Enemy(int maxHealth, int maxShield, string name, int gold, int enemyPosX, int enemyPosY, Player player, int damage) : base(health: maxHealth, shield: maxShield)
         {
-             
+            _damage = damage;
             _name = name;
             _gold = gold;
             _player =  player;
@@ -28,7 +29,7 @@ namespace FirstPlayable_GageMcKenzie
 
         }
 
-        public void Move()
+        public virtual void Move()
         {
             if (base.maxHealth.health != 0)
             {
@@ -66,7 +67,7 @@ namespace FirstPlayable_GageMcKenzie
             
         }
 
-        public void UpdateEnemy()
+        public virtual void UpdateEnemy()
         {
             if (_alive == true)
             {
@@ -77,7 +78,7 @@ namespace FirstPlayable_GageMcKenzie
             else return;
         }
 
-        public void DrawEnemy()
+        public virtual void DrawEnemy()
         {
             Console.SetCursorPosition(_enemyPos.x, _enemyPos.y);
             Console.ForegroundColor = ConsoleColor.Red;
@@ -85,7 +86,7 @@ namespace FirstPlayable_GageMcKenzie
             Console.ForegroundColor = ConsoleColor.White;
         }
 
-        public void PrePos()
+        public virtual void PrePos()
         {
             if (_randomMovement == 1)
             {
@@ -114,12 +115,20 @@ namespace FirstPlayable_GageMcKenzie
                 }
             }
         }
+        public int Damage()
+        {
+            return _damage;
+        }
 
         public override void TakeDamage(int chooseDamage)
         {
             
                 base.TakeDamage(chooseDamage: chooseDamage);
             
+        }
+        public bool IsAlive()
+        {
+            return _alive;
         }
         
     }

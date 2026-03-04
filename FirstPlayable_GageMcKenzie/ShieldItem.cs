@@ -27,6 +27,7 @@ namespace FirstPlayable_GageMcKenzie
                     _player.maxShield.health += 1;
                 }
             }
+            
 
         }
     }

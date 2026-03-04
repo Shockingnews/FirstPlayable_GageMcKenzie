@@ -28,6 +28,7 @@ namespace FirstPlayable_GageMcKenzie
                     _player.AddDamage(_damageIncrease);
                 }
             }
+            base.PlaceItem();
 
         }
     }

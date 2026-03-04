@@ -44,7 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Character.cs" />
+    <Compile Include="ChestIteam.cs" />
+    <Compile Include="ChunkyEnemy.cs" />
     <Compile Include="Enemy.cs" />
+    <Compile Include="GameHud.cs" />
     <Compile Include="HealItem.cs" />
     <Compile Include="HealthSystem.cs" />
     <Compile Include="IncreaseDamageItem.cs" />

@@ -18,13 +18,19 @@ namespace FirstPlayable_GageMcKenzie
         static Player player = new Player(100, 50, "Gage", 0, 5, 5, alive, 10);
         static List<Enemy> enemies = new List<Enemy>() 
         { 
-            new Enemy(5,0, "Mason", 5, 11, 20, player),
-            
+            new Enemy(5,0, "Mason", 5, 11, 20, player,1),
+            new NewEnemy(maxHealth: 5,maxShield:0,name: "jerry", gold: 0, enemyPosX: 25, enemyPosY: 24, player: player, damage: 1),
+            new ChunkyEnemy(maxHealth: 5, maxShield: 0,name: "Terry", gold: 0, enemyPosX: 27, enemyPosY: 24, player: player, damage: 1)
 
         };
+
+        static ChestItem chest = new ChestItem(enemies, player, 1, new List<int>() { 15}, new List<int>() { 15 }, '#', ConsoleColor.DarkGray);
+        //static ShieldItem shieldItem = new ShieldItem(player, new List<int>(10), new List<int>(10), 1, '(', ConsoleColor.DarkCyan);
+        
+        static GameHud gameHud = new GameHud( player, enemies);
         static List<NewEnemy> newEnemies = new List<NewEnemy>()
         {
-            new NewEnemy(maxHealth: 5,maxShield:0,name: "jerry", gold: 0, enemyPosX: 25, enemyPosY: 24, player: player, damage: 1)
+            //new NewEnemy(maxHealth: 5,maxShield:0,name: "jerry", gold: 0, enemyPosX: 25, enemyPosY: 24, player: player, damage: 1)
         };
         
 
@@ -61,19 +67,26 @@ namespace FirstPlayable_GageMcKenzie
             Console.SetCursorPosition(0, 0);
             map.PrintMap();
             player.PlayerHud();
+            
+            
+            chest.PlaceItem();
+            
+            
             gold.drawMoney();
             player.DrawPlayer();
             enemies[0].DrawEnemy();
-            
-            newEnemies[0].DrawEnemy();
+            enemies[1].DrawEnemy();
+            enemies[2].DrawEnemy();
+
+            //newEnemies[0].DrawEnemy();
         }
 
         static void Update()
         {
+
             
-            
-            
-            
+
+
 
             player.UpdatePlayer();
             for (int i = 0; i < enemies.Count(); i++)
@@ -94,7 +107,7 @@ namespace FirstPlayable_GageMcKenzie
                     player.PreviousPos();
                 }
             }
-            newEnemies[0].UpdateEnemy();
+            //newEnemies[0].UpdateEnemy();
 
             player.IsALive();
             turns -= 0;

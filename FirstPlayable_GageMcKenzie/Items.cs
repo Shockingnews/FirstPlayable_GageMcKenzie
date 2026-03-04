@@ -12,7 +12,7 @@ namespace FirstPlayable_GageMcKenzie
         List<int> _posY;
         Position _itemPos;
         Player _player;
-        protected List<bool> PickedUp;
+        protected List<bool> PickedUp = new List<bool>();
         char _itemLogo;
         ConsoleColor _itemColor;
 
@@ -33,16 +33,18 @@ namespace FirstPlayable_GageMcKenzie
 
         public virtual void PlaceItem()
         {
-            for (int i = 0; i < _posX.Count; i++)
+            for (int i = 0; i < PickedUp.Count; i++)
             {
-                if (PickedUp[i] == false)
+                //d
+                if (PickedUp[i] != true)
                 {
+
                     _itemPos.x = _posX[i];
                     _itemPos.y = _posY[i];
                     Console.SetCursorPosition(_itemPos.x, _itemPos.y);
                     Console.ForegroundColor = _itemColor;
-                    Console.Write(_itemLogo);
-                    Console.ForegroundColor = ConsoleColor.Black;
+                    Console.Write('k');
+                   
 
                     if (_player.currentPos.x == _itemPos.x && _player.currentPos.y == _itemPos.y)
                     {
@@ -54,5 +56,14 @@ namespace FirstPlayable_GageMcKenzie
             }
 
         }
+
+        //public void Draw()
+        //{
+        //    _itemPos.x = _posX[i];
+        //    _itemPos.y = _posY[i];
+        //    Console.SetCursorPosition(_itemPos.x, _itemPos.y);
+        //    Console.ForegroundColor = _itemColor;
+        //    Console.Write('k');
+        //}
     }
 }
