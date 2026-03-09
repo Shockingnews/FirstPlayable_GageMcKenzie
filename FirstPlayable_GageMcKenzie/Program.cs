@@ -30,9 +30,9 @@ namespace FirstPlayable_GageMcKenzie
 
         static List<Items> items = new List<Items>()
         {
-            new ChestItem(enemies, player, 1, new List<int>() { 16}, new List<int>() { 13 }, '#', ConsoleColor.DarkGray),
-            new ShieldItem(player, new List<int>() { 15,5}, new List<int>() { 10,19}, 2, '(', ConsoleColor.DarkCyan),
-            new HealItem(player, new List<int>() { 20,30}, new List<int>() { 10,1}, 2, 'H', ConsoleColor.DarkGreen),
+            new ChestItem(enemies, player, 1,16,  13 , '#', ConsoleColor.DarkGray),
+            new ShieldItem(player, 15, 10, 2, '(', ConsoleColor.DarkCyan),
+            new HealItem(player, 20, 10, 2, 'H', ConsoleColor.DarkGreen),
             
         };
         
@@ -47,6 +47,7 @@ namespace FirstPlayable_GageMcKenzie
         static void Main(string[] args)
         {
             Console.CursorVisible = false;
+            
 
             Playing();
             Console.Clear();
@@ -72,7 +73,12 @@ namespace FirstPlayable_GageMcKenzie
                 {
                     if (enemies[i]._alive == false)
                     {
-                        turns = 0;
+                        
+                        enemies.Remove(enemies[i]);
+                    }
+                    if(enemies.Count() == 0)
+                    {
+                       turns = 0;
                     }
                 }
 
@@ -133,10 +139,10 @@ namespace FirstPlayable_GageMcKenzie
                     player.PreviousPos();
                 }
 
-                if(enemies[i]._alive == false)
-                {
-                    enemies.Remove(enemies[i]);
-                }
+                //if(enemies[i]._alive == false)
+                //{
+                //    enemies.Remove(enemies[i]);
+                //}
             }
             
 

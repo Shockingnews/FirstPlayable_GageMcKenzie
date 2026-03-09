@@ -20,8 +20,20 @@ namespace FirstPlayable_GageMcKenzie
 
         public virtual void TakeDamage(int chooseDamage)
         {
-
-            maxHealth.health -= chooseDamage;
+            if(maxShield.health > 0)
+            {
+                maxShield.health -= chooseDamage;
+                if(maxShield.health < chooseDamage || maxShield.health <= 0)
+                {
+                    maxShield.health = 0;
+                    maxHealth.health -= chooseDamage;
+                }
+            }
+            else
+            {
+                maxHealth.health -= chooseDamage;
+            }
+                
         }
         //public void Update()
         //{

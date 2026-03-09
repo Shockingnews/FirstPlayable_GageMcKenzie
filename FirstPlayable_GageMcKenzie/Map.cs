@@ -37,6 +37,7 @@ namespace FirstPlayable_GageMcKenzie
         public void PrintMap()
         {
             
+            
             int bottem = 0;
             int mapPosy = 0;
             int mapPosx = 0;

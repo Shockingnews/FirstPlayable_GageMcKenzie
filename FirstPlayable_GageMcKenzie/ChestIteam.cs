@@ -9,7 +9,8 @@ namespace FirstPlayable_GageMcKenzie
     internal class ChestItem : Items
     {
         List<Enemy> _enemies;
-        public ChestItem(List<Enemy> enemies, Player player, int numberOfChests, List<int> xPos, List<int> yPos, char ChestLogo, ConsoleColor ChestColor) : base(player: player, posX: xPos, posY: yPos, numberOfItems: numberOfChests, itemLogo: ChestLogo, itemColor: ChestColor)
+        public int _turns = 100;
+        public ChestItem(List<Enemy> enemies, Player player, int numberOfChests, int xPos, int yPos, char ChestLogo, ConsoleColor ChestColor) : base(player: player, posX: xPos, posY: yPos, numberOfItems: numberOfChests, itemLogo: ChestLogo, itemColor: ChestColor)
         {
             _enemies = enemies;
         }
@@ -18,8 +19,9 @@ namespace FirstPlayable_GageMcKenzie
         {
             base.PlaceItem();
             
-            if (base.PickedUp[0] == true)
+            if (base.PickedUp == true)
             {
+                
 
                 for(int i = 0; i < _enemies.Count(); i++)
                 {
@@ -29,5 +31,6 @@ namespace FirstPlayable_GageMcKenzie
             
 
         }
+        
     }
 }

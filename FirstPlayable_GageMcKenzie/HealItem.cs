@@ -10,7 +10,7 @@ namespace FirstPlayable_GageMcKenzie
     {
         int _numOfHeals;
         Player _player;
-        public HealItem(Player player,List<int>xPos, List<int> yPos, int numOfHeals, char healLogo, ConsoleColor healColor) : base(player: player, posX: xPos, posY: yPos, numberOfItems: numOfHeals, itemLogo: healLogo,  itemColor: healColor)
+        public HealItem(Player player, int xPos, int yPos, int numOfHeals, char healLogo, ConsoleColor healColor) : base(player: player, posX: xPos, posY: yPos, numberOfItems: numOfHeals, itemLogo: healLogo,  itemColor: healColor)
         {
             _numOfHeals = numOfHeals;
             _player = player;
@@ -18,15 +18,16 @@ namespace FirstPlayable_GageMcKenzie
         public override void PlaceItem()
         {
             base.PlaceItem();
-            for(int i = 0; i < _numOfHeals; i++)
-            {
-                if(base.PickedUp[i] == true)
-                {
-                    _player.maxHealth.health += 1;
-                    
-                }
-            }
             
+                
+            
+            
+        }
+
+        public override void OnPickUp()
+        {
+            base.OnPickUp();
+            _player.maxHealth.health += 1;
         }
     }
 }

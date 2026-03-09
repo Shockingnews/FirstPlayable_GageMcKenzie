@@ -12,20 +12,17 @@ namespace FirstPlayable_GageMcKenzie
         List<int> _posY;
         Position _itemPos;
         Player _player;
-        protected List<bool> PickedUp = new List<bool>();
+        protected bool PickedUp = false;
         char _itemLogo;
         ConsoleColor _itemColor;
 
-        public Items( Player player, List<int> posX, List<int> posY, int numberOfItems, char itemLogo, ConsoleColor itemColor)
+        public Items( Player player, int posX, int posY, int numberOfItems, char itemLogo, ConsoleColor itemColor)
         {
-            for(int i = 0; i < numberOfItems; i++)
-            {
-                PickedUp.Add(false);
-            }
+            
             _itemLogo = itemLogo;
             _itemColor = itemColor;
-            _posX = posX;
-            _posY = posY;
+            _itemPos.x = posX;
+            _itemPos.y = posY;
             
             _player = player;
         }
@@ -33,14 +30,12 @@ namespace FirstPlayable_GageMcKenzie
 
         public virtual void PlaceItem()
         {
-            for (int i = 0; i < PickedUp.Count; i++)
-            {
+            
                 //d
-                if (PickedUp[i] != true)
+                if (PickedUp != true)
                 {
 
-                    _itemPos.x = _posX[i];
-                    _itemPos.y = _posY[i];
+                    
                     Console.SetCursorPosition(_itemPos.x, _itemPos.y);
                     Console.ForegroundColor = _itemColor;
                     Console.Write(_itemLogo);
@@ -49,14 +44,23 @@ namespace FirstPlayable_GageMcKenzie
 
                     if (_player.currentPos.x == _itemPos.x && _player.currentPos.y == _itemPos.y)
                     {
+                        OnPickUp();
                         
-                        PickedUp[i] = true;
-                        //PickedUp.Remove(PickedUp[i]);
-                        _player.PreviousPos();
+                        //if (PickedUp[i] = true)
+                        //{
+                        //    PickedUp.Remove(PickedUp[i]);
+                        //}
                     }
                 }
-            }
+            
 
+        }
+
+        public virtual void OnPickUp()
+        {
+            PickedUp = true;
+
+            _player.PreviousPos();
         }
 
         //public void Draw()

@@ -11,7 +11,7 @@ namespace FirstPlayable_GageMcKenzie
     {
         int _numOfShieldItems;
         Player _player;
-        public ShieldItem(Player player, List<int> xPos, List<int> yPos, int numOfShields, char shieldLogo, ConsoleColor shieldColor) : base(player: player, posX: xPos, posY: yPos, numberOfItems: numOfShields, itemLogo: shieldLogo, itemColor: shieldColor)
+        public ShieldItem(Player player, int xPos, int yPos, int numOfShields, char shieldLogo, ConsoleColor shieldColor) : base(player: player, posX: xPos, posY: yPos, numberOfItems: numOfShields, itemLogo: shieldLogo, itemColor: shieldColor)
         {
             _numOfShieldItems = numOfShields;
             _player = player;
@@ -21,16 +21,18 @@ namespace FirstPlayable_GageMcKenzie
         {
             
             base.PlaceItem();
-            for (int i = 0; i < _numOfShieldItems; i++)
-            {
-                if (base.PickedUp[i] == true)
+            
+            
+                if (base.PickedUp == true)
                 {
                     
                         _player.maxShield.health += 1;
                     
-                    
+
+
+
                 }
-            }
+            
             
 
         }
