@@ -18,16 +18,10 @@ namespace FirstPlayable_GageMcKenzie
         static Player player = new Player(100, 50, "Gage", 0, 5, 5, alive, 5);
         static List<Enemy> enemies = new List<Enemy>() 
         {
-            //new BasicEnemy(maxHealth: 5,maxShield:0,name: "jerry", gold: 0, enemyPosX: 25, enemyPosY: 24, player: player, damage: 1),
-
-            //new Enemy(maxHealth: 5, maxShield: 0, name:"Basic", enemyPosX: 30, enemyPosY: 20, player: player, damage: 1, isAlive: true, enemyLogo: 'x', color: ConsoleColor.Red),
-            //new Enemy(maxHealth: 5, maxShield: 0, name:"Basic", enemyPosX: 11, enemyPosY: 20, player: player, damage: 1, isAlive: true, enemyLogo: 'x', color: ConsoleColor.Red),
-            //new Enemy(maxHealth: 5, maxShield:0, name: "Attacker", enemyPosX: 10, enemyPosY: 24, player: player, damage: 10,isAlive: true, enemyLogo: 'I', color: ConsoleColor.Red),
-            new ChunkyEnemy(maxHealth: 5, maxShield:0, name: "Heavy", enemyPosX: 10, enemyPosY: 24, player: player, damage: 10,isAlive: true, enemyLogo: '@', color: ConsoleColor.Red),
-            new ChunkyEnemy(maxHealth: 5, maxShield:0, name: "Heavy", enemyPosX: 11, enemyPosY: 20, player: player, damage: 10,isAlive: true, enemyLogo: '@', color: ConsoleColor.Red),
-            //new Enemy(maxHealth: 5, maxShield:0, name: "Attacker", enemyPosX: 30, enemyPosY: 20, player: player, damage: 10,isAlive: true, enemyLogo: 'I', color: ConsoleColor.Red),
-            //new Enemy(maxHealth: 10, maxShield: 0, name: "Heavy", enemyPosX: 27, enemyPosY: 5, player: player, damage: 5, isAlive: true, enemyLogo: '@', color: ConsoleColor.Red),
-            //new Enemy(maxHealth: 10, maxShield: 0, name: "Heavy", enemyPosX: 30, enemyPosY: 5, player: player, damage: 5, isAlive: true, enemyLogo: '@', color: ConsoleColor.Red),
+            
+            new ChunkyEnemy(maxHealth: 20, maxShield:0, name: "Heavy", enemyPosX: 10, enemyPosY: 24, player: player, damage: 10,isAlive: true, enemyLogo: '@', color: ConsoleColor.Red),
+            new ChunkyEnemy(maxHealth: 20, maxShield:0, name: "Heavy", enemyPosX: 11, enemyPosY: 20, player: player, damage: 10,isAlive: true, enemyLogo: '@', color: ConsoleColor.Red),
+            
             new SpeedyEnemy(maxHealth: 10, maxShield: 0, name: "Speedy Boi", enemyPosX: 30, enemyPosY: 5, player: player, damage: 5, isAlive: true, enemyLogo: 'I', color: ConsoleColor.Red),
             new SpeedyEnemy(maxHealth: 10, maxShield: 0, name: "Speedy Boi", enemyPosX: 30, enemyPosY: 15, player: player, damage: 5, isAlive: true, enemyLogo: 'I', color: ConsoleColor.Red)
 

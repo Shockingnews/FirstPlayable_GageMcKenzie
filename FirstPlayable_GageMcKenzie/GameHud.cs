@@ -26,7 +26,7 @@ namespace FirstPlayable_GageMcKenzie
         {
             for(int i = 0; i < _enemies.Count(); i++)
             {
-                if (_enemies[i]._enemyPos.x <= _player.currentPos.x + 2 &&  _enemies[i]._enemyPos.x >= _player.currentPos.x - 2 || _enemies[i]._enemyPos.y <= _player.currentPos.x + 2 && _enemies[i]._enemyPos.y >= _player.currentPos.x - 2 )
+                if (_enemies[i]._enemyPos.x == _player.currentPos.x + 2 && _enemies[i]._enemyPos.y == _player.currentPos.y + 2  || _enemies[i]._enemyPos.x == _player.currentPos.x - 2 && _enemies[i]._enemyPos.y == _player.currentPos.y - 2 )
                 {
                     Console.WriteLine($"Enemy Name: {_enemies[i]._name} Health: {_enemies[i].maxHealth.health} Shield: {_enemies[i].maxShield.health}  Gold: {0}");
                 }
