@@ -15,16 +15,21 @@ namespace FirstPlayable_GageMcKenzie
         static bool alive = true;
 
 
-        static Player player = new Player(100, 50, "Gage", 0, 5, 5, alive, 10);
+        static Player player = new Player(100, 50, "Gage", 0, 5, 5, alive, 5);
         static List<Enemy> enemies = new List<Enemy>() 
         {
             //new BasicEnemy(maxHealth: 5,maxShield:0,name: "jerry", gold: 0, enemyPosX: 25, enemyPosY: 24, player: player, damage: 1),
-            new Enemy(maxHealth: 5, maxShield: 0, name:"Basic", enemyPosX: 30, enemyPosY: 20, player: player, damage: 1, isAlive: true, enemyLogo: 'x', color: ConsoleColor.Red),
-            new Enemy(maxHealth: 5, maxShield: 0, name:"Basic", enemyPosX: 11, enemyPosY: 20, player: player, damage: 1, isAlive: true, enemyLogo: 'x', color: ConsoleColor.Red),
-            new Enemy(maxHealth: 5,maxShield:0,name: "Attacker", enemyPosX: 10, enemyPosY: 24, player: player, damage: 10,isAlive: true,enemyLogo: 'I', color: ConsoleColor.Red),
-            new Enemy(maxHealth: 5,maxShield:0,name: "Attacker", enemyPosX: 30, enemyPosY: 20, player: player, damage: 10,isAlive: true,enemyLogo: 'I', color: ConsoleColor.Red),
-            new Enemy(maxHealth: 10, maxShield: 0,name: "Heavy", enemyPosX: 27, enemyPosY: 5, player: player, damage: 5, isAlive: true,enemyLogo: '@', color: ConsoleColor.Red),
-            new Enemy(maxHealth: 10, maxShield: 0,name: "Heavy", enemyPosX: 30, enemyPosY: 5, player: player, damage: 5, isAlive: true,enemyLogo: '@', color: ConsoleColor.Red)
+
+            //new Enemy(maxHealth: 5, maxShield: 0, name:"Basic", enemyPosX: 30, enemyPosY: 20, player: player, damage: 1, isAlive: true, enemyLogo: 'x', color: ConsoleColor.Red),
+            //new Enemy(maxHealth: 5, maxShield: 0, name:"Basic", enemyPosX: 11, enemyPosY: 20, player: player, damage: 1, isAlive: true, enemyLogo: 'x', color: ConsoleColor.Red),
+            //new Enemy(maxHealth: 5, maxShield:0, name: "Attacker", enemyPosX: 10, enemyPosY: 24, player: player, damage: 10,isAlive: true, enemyLogo: 'I', color: ConsoleColor.Red),
+            new ChunkyEnemy(maxHealth: 5, maxShield:0, name: "Heavy", enemyPosX: 10, enemyPosY: 24, player: player, damage: 10,isAlive: true, enemyLogo: '@', color: ConsoleColor.Red),
+            new ChunkyEnemy(maxHealth: 5, maxShield:0, name: "Heavy", enemyPosX: 11, enemyPosY: 20, player: player, damage: 10,isAlive: true, enemyLogo: '@', color: ConsoleColor.Red),
+            //new Enemy(maxHealth: 5, maxShield:0, name: "Attacker", enemyPosX: 30, enemyPosY: 20, player: player, damage: 10,isAlive: true, enemyLogo: 'I', color: ConsoleColor.Red),
+            //new Enemy(maxHealth: 10, maxShield: 0, name: "Heavy", enemyPosX: 27, enemyPosY: 5, player: player, damage: 5, isAlive: true, enemyLogo: '@', color: ConsoleColor.Red),
+            //new Enemy(maxHealth: 10, maxShield: 0, name: "Heavy", enemyPosX: 30, enemyPosY: 5, player: player, damage: 5, isAlive: true, enemyLogo: '@', color: ConsoleColor.Red),
+            new SpeedyEnemy(maxHealth: 10, maxShield: 0, name: "Speedy Boi", enemyPosX: 30, enemyPosY: 5, player: player, damage: 5, isAlive: true, enemyLogo: 'I', color: ConsoleColor.Red),
+            new SpeedyEnemy(maxHealth: 10, maxShield: 0, name: "Speedy Boi", enemyPosX: 30, enemyPosY: 15, player: player, damage: 5, isAlive: true, enemyLogo: 'I', color: ConsoleColor.Red)
 
         };
 
@@ -33,6 +38,7 @@ namespace FirstPlayable_GageMcKenzie
             new ChestItem(enemies, player, 1,16,  13 , '#', ConsoleColor.DarkGray),
             new ShieldItem(player, 15, 10, 2, '(', ConsoleColor.DarkCyan),
             new HealItem(player, 20, 10, 2, 'H', ConsoleColor.DarkGreen),
+
             
         };
         
@@ -125,7 +131,7 @@ namespace FirstPlayable_GageMcKenzie
             {
                 if (player.currentPos.x == enemies[i]._enemyPos.x && player.currentPos.y == enemies[i]._enemyPos.y)
                 {
-                    player.TakeDamage(5);
+                    player.TakeDamage(enemies[i].Damage());
                     player.PreviousPos();
                     
                 }
@@ -134,9 +140,9 @@ namespace FirstPlayable_GageMcKenzie
                 
                 if (player.currentPos.x == enemies[i]._enemyPos.x && player.currentPos.y == enemies[i]._enemyPos.y)
                 {
-                    enemies[i].TakeDamage(10);
+                    enemies[i].TakeDamage(player.Damage());
                     enemies[i].PrePos();
-                    player.PreviousPos();
+                    
                 }
 
                 //if(enemies[i]._alive == false)

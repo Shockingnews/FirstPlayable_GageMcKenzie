@@ -15,7 +15,7 @@ namespace FirstPlayable_GageMcKenzie
         public Position _enemyPos;
         Player _player;
         public bool _alive = true;
-        int _randomMovement;
+        
         int _damage;
         char _enemyLogo;
         ConsoleColor _color;
@@ -42,10 +42,7 @@ namespace FirstPlayable_GageMcKenzie
             {
                 if (_enemyPos.x <= _player.currentPos.x + 3 && _enemyPos.x >= _player.currentPos.x - 3 || _enemyPos.x <= _player.currentPos.y + 3 && _enemyPos.x >= _player.currentPos.y - 3)
                 {
-                    Random random = new Random();
-                    _randomMovement = random.Next(1, 3);
-                    if (_randomMovement == 1)
-                    {
+                    
                         if (_enemyPos.x > _player.currentPos.x)
                         {
                             _enemyPos.x -= 1;
@@ -56,9 +53,8 @@ namespace FirstPlayable_GageMcKenzie
                             _enemyPos.x += 1;
 
                         }
-                    }
-                    if (_randomMovement == 2)
-                    {
+                    
+                    
                         if (_enemyPos.y > _player.currentPos.y)
                         {
                             _enemyPos.y -= 1;
@@ -69,7 +65,7 @@ namespace FirstPlayable_GageMcKenzie
                             _enemyPos.y += 1;
 
                         }
-                    }
+                    
                 }
             }
             
@@ -101,8 +97,7 @@ namespace FirstPlayable_GageMcKenzie
 
         public virtual void PrePos()
         {
-            if (_randomMovement == 1)
-            {
+            
                 if (_enemyPos.x > _player.currentPos.x)
                 {
                     _enemyPos.x += 1;
@@ -113,9 +108,8 @@ namespace FirstPlayable_GageMcKenzie
                     _enemyPos.x -= 1;
 
                 }
-            }
-            if (_randomMovement == 2)
-            {
+            
+            
                 if (_enemyPos.y > _player.currentPos.y)
                 {
                     _enemyPos.y += 1;
@@ -126,7 +120,7 @@ namespace FirstPlayable_GageMcKenzie
                     _enemyPos.y -= 1;
 
                 }
-            }
+            
         }
         public virtual int Damage()
         {

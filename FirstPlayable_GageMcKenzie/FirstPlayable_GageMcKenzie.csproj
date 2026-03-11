@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Character.cs" />
     <Compile Include="ChestIteam.cs" />
+    <Compile Include="ChunkyEnemy.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="GameHud.cs" />
     <Compile Include="HealItem.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShieldItem.cs" />
+    <Compile Include="SpeedyEnemy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
