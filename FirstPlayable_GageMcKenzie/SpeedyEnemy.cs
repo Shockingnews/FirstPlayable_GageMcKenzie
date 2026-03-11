@@ -86,24 +86,24 @@ namespace FirstPlayable_GageMcKenzie
             
                 if (base._enemyPos.x > _player.currentPos.x)
                 {
-                base._enemyPos.x += 1;
+                    base._enemyPos.x += 1;
 
                 }
                 else if (base._enemyPos.x < _player.currentPos.x)
                 {
-                base._enemyPos.x -= 1;
+                    base._enemyPos.x -= 1;
 
                 }
             
             
                 if (base._enemyPos.y > _player.currentPos.y)
                 {
-                base._enemyPos.y += 1;
+                    base._enemyPos.y += 1;
 
                 }
                 else if (base._enemyPos.y < _player.currentPos.y)
                 {
-                base._enemyPos.y -= 1;
+                    base._enemyPos.y -= 1;
 
                 }
             

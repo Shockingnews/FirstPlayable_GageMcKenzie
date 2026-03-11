@@ -91,6 +91,7 @@ namespace FirstPlayable_GageMcKenzie
         {
             Console.SetCursorPosition(0, 0);
             map.PrintMap();
+
             
             gameHud.PlayerHud();
             gameHud.EnemyHud();
@@ -115,8 +116,8 @@ namespace FirstPlayable_GageMcKenzie
 
         static void Update()
         {
+            Draw();
 
-            
 
 
 
@@ -149,7 +150,7 @@ namespace FirstPlayable_GageMcKenzie
             player.IsALive();
             turns -= 0;
             Console.Clear();
-            Draw();
+            
 
 
         }

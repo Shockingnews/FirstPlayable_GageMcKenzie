@@ -60,7 +60,7 @@ namespace FirstPlayable_GageMcKenzie
         {
             PickedUp = true;
 
-            _player.PreviousPos();
+            
         }
 
         //public void Draw()
