@@ -25,9 +25,10 @@ namespace FirstPlayable_GageMcKenzie
         }
         public override void OnPickUp()
         {
-            base.OnPickUp();
-            _player.maxHealth.health += 1;
+            _player.maxShield.health += 1;
             _player.PreviousPos();
+            base.OnPickUp();
+            
         }
     }
 

@@ -80,6 +80,10 @@ namespace FirstPlayable_GageMcKenzie
             //Console.Write(_enemyLogo);
             //Console.ForegroundColor = ConsoleColor.White;
         }
+        public override void Reset()
+        {
+            base.Reset();
+        }
 
         public override void PrePos()
         {

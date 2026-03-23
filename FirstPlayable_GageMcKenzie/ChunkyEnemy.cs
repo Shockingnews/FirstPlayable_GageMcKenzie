@@ -62,7 +62,10 @@ namespace FirstPlayable_GageMcKenzie
 
 
         }
-
+        public override void Reset()
+        {
+            base.Reset();
+        }
         public override void UpdateEnemy()
         {
             if (base._alive == true)

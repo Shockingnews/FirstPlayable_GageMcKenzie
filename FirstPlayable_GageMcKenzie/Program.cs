@@ -13,6 +13,7 @@ namespace FirstPlayable_GageMcKenzie
         
         public static int turns = 50;
         static bool alive = true;
+        static int enenmiesDaed = 0;
 
 
         static Player player = new Player(100, 50, "Gage", 0, 5, 5, alive, 5);
@@ -76,8 +77,14 @@ namespace FirstPlayable_GageMcKenzie
                 {
                     if (enemies[i]._alive == false)
                     {
+                        enenmiesDaed += 1;
+                        enemies[i].Reset();
                         
-                        enemies.Remove(enemies[i]);
+                        if(enenmiesDaed == 21)
+                        {
+                            enemies.Remove(enemies[i]);
+                        }
+                        
                     }
                     if(enemies.Count() == 0)
                     {
@@ -103,6 +110,12 @@ namespace FirstPlayable_GageMcKenzie
             for (int i = 0; i < items.Count(); i++)
             {
                 items[i].PlaceItem();
+                if (items[i].PickedUp == true)
+                {
+                    items.Remove(items[i]);
+                }
+                
+                
             }
             
             

@@ -8,8 +8,8 @@ namespace FirstPlayable_GageMcKenzie
 {
     internal class Enemy : Character
     {
-        
-        
+        int startingHealth;
+
         public string _name;
         
         public Position _enemyPos;
@@ -19,6 +19,9 @@ namespace FirstPlayable_GageMcKenzie
         int _damage;
         char _enemyLogo;
         ConsoleColor _color;
+
+        int StartPosX;
+        int StartPosY;
 
 
         public Enemy(int maxHealth, int maxShield, string name, int enemyPosX, int enemyPosY, Player player, int damage, bool isAlive, char enemyLogo, ConsoleColor color) : base(health: maxHealth, shield: maxShield)
@@ -33,6 +36,10 @@ namespace FirstPlayable_GageMcKenzie
             _player =  player;
             _enemyPos.x = enemyPosX;
             _enemyPos.y = enemyPosY;
+            StartPosX = enemyPosX;
+            StartPosY = enemyPosY;
+
+            startingHealth = maxHealth;
 
         }
 
@@ -85,6 +92,13 @@ namespace FirstPlayable_GageMcKenzie
                 }
             }
             
+        }
+        public virtual void Reset()
+        {
+            _enemyPos.x = StartPosX;
+            _enemyPos.y = StartPosY;
+            maxHealth.health = startingHealth;
+            _alive = true;
         }
 
         public virtual void DrawEnemy()
