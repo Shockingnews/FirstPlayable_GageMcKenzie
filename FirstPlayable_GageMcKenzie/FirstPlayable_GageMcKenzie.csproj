@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="borders.cs" />
+    <Compile Include="ButtonIteam.cs" />
     <Compile Include="Character.cs" />
     <Compile Include="ChestIteam.cs" />
     <Compile Include="ChunkyEnemy.cs" />

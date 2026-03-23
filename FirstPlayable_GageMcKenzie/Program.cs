@@ -26,19 +26,21 @@ namespace FirstPlayable_GageMcKenzie
             new SpeedyEnemy(maxHealth: 10, maxShield: 0, name: "Speedy Boi", enemyPosX: 30, enemyPosY: 15, player: player, damage: 5, isAlive: true, enemyLogo: 'I', color: ConsoleColor.Red)
 
         };
+        static Borders borders = new Borders(player, enemies);
 
         static List<Items> items = new List<Items>()
         {
             new ChestItem(enemies, player, 1,16,  13 , '#', ConsoleColor.DarkGray),
             new ShieldItem(player, 15, 10, 2, '(', ConsoleColor.DarkCyan),
             new HealItem(player, 20, 10, 2, 'H', ConsoleColor.DarkGreen),
+            new ButtonItem(player, 21,21,1,'?', ConsoleColor.Cyan, borders),
 
             
         };
         
         
         static GameHud gameHud = new GameHud( player, enemies);
-        
+
         
 
         static Money gold = new Money(1, player);
@@ -65,6 +67,7 @@ namespace FirstPlayable_GageMcKenzie
         }
         static void Playing()
         {
+            borders.AddBorders();
             Draw();
             while (turns != 0 && player.IsALive() == true)
             {
@@ -91,12 +94,13 @@ namespace FirstPlayable_GageMcKenzie
         {
             Console.SetCursorPosition(0, 0);
             map.PrintMap();
-
+            
             
             gameHud.PlayerHud();
             gameHud.EnemyHud();
+            borders.DrawBorder();
 
-            for(int i = 0; i < items.Count(); i++)
+            for (int i = 0; i < items.Count(); i++)
             {
                 items[i].PlaceItem();
             }
@@ -116,10 +120,11 @@ namespace FirstPlayable_GageMcKenzie
 
         static void Update()
         {
+            borders.UpdateBorder();
             Draw();
 
 
-
+            
 
             player.UpdatePlayer();
             for (int i = 0; i < enemies.Count(); i++)
