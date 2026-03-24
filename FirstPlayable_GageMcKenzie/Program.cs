@@ -14,6 +14,7 @@ namespace FirstPlayable_GageMcKenzie
         public static int turns = 50;
         static bool alive = true;
         static int enenmiesDaed = 0;
+        static int winNum = 0;
 
 
         static Player player = new Player(100, 50, "Gage", 0, 5, 5, alive, 5);
@@ -23,18 +24,18 @@ namespace FirstPlayable_GageMcKenzie
             new ChunkyEnemy(maxHealth: 20, maxShield:0, name: "Heavy", enemyPosX: 10, enemyPosY: 24, player: player, damage: 10,isAlive: true, enemyLogo: '@', color: ConsoleColor.Red),
             new ChunkyEnemy(maxHealth: 20, maxShield:0, name: "Heavy", enemyPosX: 11, enemyPosY: 20, player: player, damage: 10,isAlive: true, enemyLogo: '@', color: ConsoleColor.Red),
             
-            new SpeedyEnemy(maxHealth: 10, maxShield: 0, name: "Speedy Boi", enemyPosX: 30, enemyPosY: 5, player: player, damage: 5, isAlive: true, enemyLogo: 'I', color: ConsoleColor.Red),
-            new SpeedyEnemy(maxHealth: 10, maxShield: 0, name: "Speedy Boi", enemyPosX: 30, enemyPosY: 15, player: player, damage: 5, isAlive: true, enemyLogo: 'I', color: ConsoleColor.Red)
+            //new SpeedyEnemy(maxHealth: 10, maxShield: 0, name: "Speedy Boi", enemyPosX: 30, enemyPosY: 5, player: player, damage: 5, isAlive: true, enemyLogo: 'I', color: ConsoleColor.Red),
+            //new SpeedyEnemy(maxHealth: 10, maxShield: 0, name: "Speedy Boi", enemyPosX: 30, enemyPosY: 15, player: player, damage: 5, isAlive: true, enemyLogo: 'I', color: ConsoleColor.Red)
 
         };
         static Borders borders = new Borders(player, enemies);
 
         static List<Items> items = new List<Items>()
         {
-            new ChestItem(enemies, player, 1,16,  13 , '#', ConsoleColor.DarkGray),
+            new ChestItem(winNum,enemies, player, 1,21,  20 , '#', ConsoleColor.DarkGray),
             new ShieldItem(player, 15, 10, 2, '(', ConsoleColor.DarkCyan),
             new HealItem(player, 20, 10, 2, 'H', ConsoleColor.DarkGreen),
-            new ButtonItem(player, 21,21,1,'?', ConsoleColor.Cyan, borders),
+            new ButtonItem(player, 39,5,1,'?', ConsoleColor.Cyan, borders),
 
             
         };
@@ -86,7 +87,7 @@ namespace FirstPlayable_GageMcKenzie
                         }
                         
                     }
-                    if(enemies.Count() == 0)
+                    if(enemies.Count() == 0 )
                     {
                        turns = 0;
                     }
@@ -146,7 +147,9 @@ namespace FirstPlayable_GageMcKenzie
                 {
                     player.TakeDamage(enemies[i].Damage());
                     player.PreviousPos();
-                    
+                    //enemies[i].PrePos();
+
+
                 }
                 map.CheckPos();
                 enemies[i].UpdateEnemy();
@@ -155,7 +158,22 @@ namespace FirstPlayable_GageMcKenzie
                 {
                     enemies[i].TakeDamage(player.Damage());
                     enemies[i].PrePos();
-                    
+                    player.PreviousPos();
+
+                }
+                for (int j = 0; j < enemies.Count(); j++)
+                {
+                    if (enemies[i] != enemies[j])
+                    {
+                        if (enemies[j]._enemyPos.x == enemies[i]._enemyPos.x && enemies[j]._enemyPos.y == enemies[i]._enemyPos.y)
+                        {
+                            
+                            enemies[i].PrePos();
+                            enemies[j].PrePos();
+
+
+                        }
+                    }
                 }
 
                 //if(enemies[i]._alive == false)

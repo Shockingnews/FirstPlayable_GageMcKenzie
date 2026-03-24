@@ -9,10 +9,12 @@ namespace FirstPlayable_GageMcKenzie
     internal class ChestItem : Items
     {
         List<Enemy> _enemies;
+        public int _winChest;
         public int _turns = 100;
-        public ChestItem(List<Enemy> enemies, Player player, int numberOfChests, int xPos, int yPos, char ChestLogo, ConsoleColor ChestColor) : base(player: player, posX: xPos, posY: yPos, numberOfItems: numberOfChests, itemLogo: ChestLogo, itemColor: ChestColor)
+        public ChestItem(int winChest, List<Enemy> enemies, Player player, int numberOfChests, int xPos, int yPos, char ChestLogo, ConsoleColor ChestColor) : base(player: player, posX: xPos, posY: yPos, numberOfItems: numberOfChests, itemLogo: ChestLogo, itemColor: ChestColor)
         {
             _enemies = enemies;
+            _winChest = winChest;
         }
 
         public override void PlaceItem()
@@ -26,6 +28,8 @@ namespace FirstPlayable_GageMcKenzie
                 for(int i = 0; i < _enemies.Count(); i++)
                 {
                     _enemies[i]._alive = false;
+                    _winChest = 100;
+                    
                 }
             }
             

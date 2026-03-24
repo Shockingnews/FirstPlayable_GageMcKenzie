@@ -25,7 +25,7 @@ namespace FirstPlayable_GageMcKenzie
         public override void OnPickUp()
         {
             base.OnPickUp();
-            _borders.borders.Remove((20, 20));
+            _borders.borders.Remove((20, 20,"Left"));
         }
     }
 }
