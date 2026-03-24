@@ -14,18 +14,34 @@ namespace FirstPlayable_GageMcKenzie
         public static int turns = 50;
         static bool alive = true;
         static int enenmiesDaed = 0;
-        static int winNum = 0;
+        static bool winNum = false;
 
 
-        static Player player = new Player(100, 50, "Gage", 0, 5, 5, alive, 5);
+        static Player player = new Player(100, 50, "Gage", 0, 5, 5, alive, 10);
         static List<Enemy> enemies = new List<Enemy>() 
         {
             
             new ChunkyEnemy(maxHealth: 20, maxShield:0, name: "Heavy", enemyPosX: 10, enemyPosY: 24, player: player, damage: 10,isAlive: true, enemyLogo: '@', color: ConsoleColor.Red),
             new ChunkyEnemy(maxHealth: 20, maxShield:0, name: "Heavy", enemyPosX: 11, enemyPosY: 20, player: player, damage: 10,isAlive: true, enemyLogo: '@', color: ConsoleColor.Red),
-            
-            new SpeedyEnemy(maxHealth: 10, maxShield: 0, name: "Speedy Boi", enemyPosX: 30, enemyPosY: 5, player: player, damage: 5, isAlive: true, enemyLogo: 'I', color: ConsoleColor.Red),
-            new SpeedyEnemy(maxHealth: 10, maxShield: 0, name: "Speedy Boi", enemyPosX: 30, enemyPosY: 15, player: player, damage: 5, isAlive: true, enemyLogo: 'I', color: ConsoleColor.Red)
+            new ChunkyEnemy(maxHealth: 20, maxShield:0, name: "Heavy", enemyPosX: 20, enemyPosY: 30, player: player, damage: 10,isAlive: true, enemyLogo: '@', color: ConsoleColor.Red),
+            new ChunkyEnemy(maxHealth: 20, maxShield:0, name: "Heavy", enemyPosX: 40, enemyPosY: 2, player: player, damage: 10,isAlive: true, enemyLogo: '@', color: ConsoleColor.Red),
+            new ChunkyEnemy(maxHealth: 20, maxShield:0, name: "Heavy", enemyPosX: 79, enemyPosY: 35, player: player, damage: 10,isAlive: true, enemyLogo: '@', color: ConsoleColor.Red),
+            new ChunkyEnemy(maxHealth: 20, maxShield:0, name: "Heavy", enemyPosX: 90, enemyPosY: 25, player: player, damage: 10,isAlive: true, enemyLogo: '@', color: ConsoleColor.Red),
+            new ChunkyEnemy(maxHealth: 20, maxShield:0, name: "Heavy", enemyPosX: 77, enemyPosY: 25, player: player, damage: 10,isAlive: true, enemyLogo: '@', color: ConsoleColor.Red),
+            new ChunkyEnemy(maxHealth: 20, maxShield:0, name: "Heavy", enemyPosX: 44, enemyPosY: 7, player: player, damage: 10,isAlive: true, enemyLogo: '@', color: ConsoleColor.Red),
+            new ChunkyEnemy(maxHealth: 20, maxShield:0, name: "Heavy", enemyPosX: 59, enemyPosY: 38, player: player, damage: 10,isAlive: true, enemyLogo: '@', color: ConsoleColor.Red),
+            new ChunkyEnemy(maxHealth: 20, maxShield:0, name: "Heavy", enemyPosX: 100, enemyPosY: 20, player: player, damage: 10,isAlive: true, enemyLogo: '@', color: ConsoleColor.Red),
+
+            new SpeedyEnemy(maxHealth: 10, maxShield: 0, name: "Speedy Boi", enemyPosX: 89, enemyPosY: 5, player: player, damage: 5, isAlive: true, enemyLogo: 'I', color: ConsoleColor.Red),
+            new SpeedyEnemy(maxHealth: 10, maxShield: 0, name: "Speedy Boi", enemyPosX: 4, enemyPosY: 15, player: player, damage: 5, isAlive: true, enemyLogo: 'I', color: ConsoleColor.Red),
+            new SpeedyEnemy(maxHealth: 10, maxShield: 0, name: "Speedy Boi", enemyPosX: 50, enemyPosY: 5, player: player, damage: 5, isAlive: true, enemyLogo: 'I', color: ConsoleColor.Red),
+            new SpeedyEnemy(maxHealth: 10, maxShield: 0, name: "Speedy Boi", enemyPosX: 90, enemyPosY: 15, player: player, damage: 5, isAlive: true, enemyLogo: 'I', color: ConsoleColor.Red),
+            new SpeedyEnemy(maxHealth: 10, maxShield: 0, name: "Speedy Boi", enemyPosX: 100, enemyPosY: 5, player: player, damage: 5, isAlive: true, enemyLogo: 'I', color: ConsoleColor.Red),
+            new SpeedyEnemy(maxHealth: 10, maxShield: 0, name: "Speedy Boi", enemyPosX: 110, enemyPosY: 15, player: player, damage: 5, isAlive: true, enemyLogo: 'I', color: ConsoleColor.Red),
+            new SpeedyEnemy(maxHealth: 10, maxShield: 0, name: "Speedy Boi", enemyPosX: 34, enemyPosY: 5, player: player, damage: 5, isAlive: true, enemyLogo: 'I', color: ConsoleColor.Red),
+            new SpeedyEnemy(maxHealth: 10, maxShield: 0, name: "Speedy Boi", enemyPosX: 62, enemyPosY: 15, player: player, damage: 5, isAlive: true, enemyLogo: 'I', color: ConsoleColor.Red),
+            new SpeedyEnemy(maxHealth: 10, maxShield: 0, name: "Speedy Boi", enemyPosX: 42, enemyPosY: 5, player: player, damage: 5, isAlive: true, enemyLogo: 'I', color: ConsoleColor.Red),
+            new SpeedyEnemy(maxHealth: 10, maxShield: 0, name: "Speedy Boi", enemyPosX: 56, enemyPosY: 15, player: player, damage: 5, isAlive: true, enemyLogo: 'I', color: ConsoleColor.Red)
 
         };
         static Borders borders = new Borders(player, enemies);
@@ -34,7 +50,25 @@ namespace FirstPlayable_GageMcKenzie
         {
             new ChestItem(winNum,enemies, player, 1,21,  20 , '#', ConsoleColor.DarkGray),
             new ShieldItem(player, 15, 10, 2, '(', ConsoleColor.DarkCyan),
+            new ShieldItem(player, 90, 1, 2, '(', ConsoleColor.DarkCyan),
+            new ShieldItem(player, 110, 25, 2, '(', ConsoleColor.DarkCyan),
+            new ShieldItem(player, 40, 16, 2, '(', ConsoleColor.DarkCyan),
+            new ShieldItem(player, 60, 2, 2, '(', ConsoleColor.DarkCyan),
+            new ShieldItem(player, 56, 10, 2, '(', ConsoleColor.DarkCyan),
+            new ShieldItem(player, 120, 1, 2, '(', ConsoleColor.DarkCyan),
+            new ShieldItem(player, 89, 25, 2, '(', ConsoleColor.DarkCyan),
+            new ShieldItem(player, 23, 16, 2, '(', ConsoleColor.DarkCyan),
+            new ShieldItem(player, 56, 2, 2, '(', ConsoleColor.DarkCyan),
             new HealItem(player, 20, 10, 2, 'H', ConsoleColor.DarkGreen),
+            new HealItem(player, 50, 15, 2, 'H', ConsoleColor.DarkGreen),
+            new HealItem(player, 66, 20, 2, 'H', ConsoleColor.DarkGreen),
+            new HealItem(player, 45, 23, 2, 'H', ConsoleColor.DarkGreen),
+            new HealItem(player, 13, 30, 2, 'H', ConsoleColor.DarkGreen),
+            new HealItem(player, 23, 10, 2, 'H', ConsoleColor.DarkGreen),
+            new HealItem(player, 100, 15, 2, 'H', ConsoleColor.DarkGreen),
+            new HealItem(player, 90, 20, 2, 'H', ConsoleColor.DarkGreen),
+            new HealItem(player, 12, 23, 2, 'H', ConsoleColor.DarkGreen),
+            new HealItem(player, 67, 30, 2, 'H', ConsoleColor.DarkGreen),
             new ButtonItem(player, 39,5,1,'?', ConsoleColor.Cyan, borders),
 
             
@@ -74,20 +108,20 @@ namespace FirstPlayable_GageMcKenzie
         {
             borders.AddBorders();
             Draw();
-            while (turns != 0 && player.IsALive() == true)
+            while (turns != 0 && player.IsALive() == true )
             {
                 Update();
                 for (int i = 0; i < enemies.Count(); i++)
                 {
                     if (enemies[i]._alive == false)
                     {
-                        enenmiesDaed += 1;
-                        enemies[i].Reset();
+                        //enenmiesDaed += 1;
+                        //enemies[i].Reset();
                         
-                        if(enenmiesDaed == 21)
-                        {
+                        //if(enenmiesDaed == 21)
+                        //{
                             enemies.Remove(enemies[i]);
-                        }
+                        
                         
                     }
                     if(enemies.Count() == 0 )

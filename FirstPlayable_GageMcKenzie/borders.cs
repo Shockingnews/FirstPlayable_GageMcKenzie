@@ -35,6 +35,7 @@ namespace FirstPlayable_GageMcKenzie
                 {
                     _player.PreviousPos();
                 }
+
                 if (_enmies[0]._enemyPos.x == borders[0].Item1 && _enmies[0]._enemyPos.y == borders[0].Item2)
                 {
                     _enmies[0].PrePos();

@@ -68,6 +68,10 @@ namespace FirstPlayable_GageMcKenzie
             //map.PrintMap();
         }
 
+        //public bool pickedUpItem()
+        //{
+        //    return PickedUp;
+        //}
         //public void Draw()
         //{
         //    _itemPos.x = _posX[i];
