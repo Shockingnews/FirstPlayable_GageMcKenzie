@@ -24,8 +24,8 @@ namespace FirstPlayable_GageMcKenzie
             new ChunkyEnemy(maxHealth: 20, maxShield:0, name: "Heavy", enemyPosX: 10, enemyPosY: 24, player: player, damage: 10,isAlive: true, enemyLogo: '@', color: ConsoleColor.Red),
             new ChunkyEnemy(maxHealth: 20, maxShield:0, name: "Heavy", enemyPosX: 11, enemyPosY: 20, player: player, damage: 10,isAlive: true, enemyLogo: '@', color: ConsoleColor.Red),
             
-            //new SpeedyEnemy(maxHealth: 10, maxShield: 0, name: "Speedy Boi", enemyPosX: 30, enemyPosY: 5, player: player, damage: 5, isAlive: true, enemyLogo: 'I', color: ConsoleColor.Red),
-            //new SpeedyEnemy(maxHealth: 10, maxShield: 0, name: "Speedy Boi", enemyPosX: 30, enemyPosY: 15, player: player, damage: 5, isAlive: true, enemyLogo: 'I', color: ConsoleColor.Red)
+            new SpeedyEnemy(maxHealth: 10, maxShield: 0, name: "Speedy Boi", enemyPosX: 30, enemyPosY: 5, player: player, damage: 5, isAlive: true, enemyLogo: 'I', color: ConsoleColor.Red),
+            new SpeedyEnemy(maxHealth: 10, maxShield: 0, name: "Speedy Boi", enemyPosX: 30, enemyPosY: 15, player: player, damage: 5, isAlive: true, enemyLogo: 'I', color: ConsoleColor.Red)
 
         };
         static Borders borders = new Borders(player, enemies);
@@ -50,6 +50,9 @@ namespace FirstPlayable_GageMcKenzie
         static Map map = new Map(player, enemies);
         static void Main(string[] args)
         {
+
+            Console.SetWindowSize(Console.LargestWindowWidth, Console.LargestWindowHeight);
+
             Console.CursorVisible = false;
             
 
