@@ -140,6 +140,27 @@ namespace FirstPlayable_GageMcKenzie
 
         }
 
+        public void TilePlacement()
+        {
+            for (int i = 0; i < _newMapData.GetLength(0); i++)
+            {
+                for (int j = 0; j < _newMapData[i].Length; j++)
+                {
+
+                    if (_player.previousPos.x == i && _player.previousPos.y == j)
+                    {
+                        Console.SetCursorPosition(_player.previousPos.x, _player.previousPos.y);
+                        Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                        Console.Write(_newMapData[i][j]);
+                    }
+                }
+            }
+                
+                    
+            
+            
+        }
+
         public void CheckPos()
         {
             for (int i = 0; i < _damageBorder.Count(); i++)

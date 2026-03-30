@@ -13,6 +13,7 @@ namespace FirstPlayable_GageMcKenzie
         HealthSystem _currentHealth;
         public string _name;
         public Position currentPos = new Position();
+        public Position previousPos = new Position();
         bool _alive = true;
         ConsoleKeyInfo _playerInput;
         public int money;
@@ -52,27 +53,83 @@ namespace FirstPlayable_GageMcKenzie
             {
                 currentPos.x += 1;
             }
-            
+            previousPos.x = currentPos.x;
+            previousPos.y = currentPos.y;
+            UpdatePreviousPos();
+            //if (_playerInput.Key == ConsoleKey.W)
+            //{
+            //    currentPos.y -= 1;
+            //    previousPos.y = currentPos.y + 1;
+            //}
+            //else if (_playerInput.Key == ConsoleKey.S)
+            //{
+            //    currentPos.y += 1;
+            //    previousPos.y = currentPos.y - 1;
+            //}
+            //else if (_playerInput.Key == ConsoleKey.A)
+            //{
+            //    currentPos.x -= 1;
+            //    previousPos.x = currentPos.x + 1;
+            //}
+            //else if (_playerInput.Key == ConsoleKey.D)
+            //{
+            //    currentPos.x += 1;
+            //    previousPos.x = currentPos.x - 1;
+            //}
+
+        }
+
+        void UpdatePreviousPos()
+        {
+            if (_playerInput.Key == ConsoleKey.W)
+            {
+                previousPos.y += 1;
+                
+
+            }
+            else if (_playerInput.Key == ConsoleKey.S)
+            {
+                previousPos.y -= 1;
+                
+            }
+            else if (_playerInput.Key == ConsoleKey.A)
+            {
+                previousPos.x += 1;
+                
+            }
+            else if (_playerInput.Key == ConsoleKey.D)
+            {
+                previousPos.x -= 1;
+                
+            }
         }
 
         public void PreviousPos()
         {
-            if (_playerInput.Key == ConsoleKey.W)
-            {
-                currentPos.y += 1;
-            }
-            else if (_playerInput.Key == ConsoleKey.S)
-            {
-                currentPos.y -= 1;
-            }
-            else if (_playerInput.Key == ConsoleKey.A)
-            {
-                currentPos.x += 1;
-            }
-            else if (_playerInput.Key == ConsoleKey.D)
-            {
-                currentPos.x -= 1;
-            }
+            currentPos.y = previousPos.y;
+            currentPos.x = previousPos.x;
+
+            //if (_playerInput.Key == ConsoleKey.W)
+            //{
+            //    previousPos.y += 1;
+            //    currentPos.y = previousPos.y;
+
+            //}
+            //else if (_playerInput.Key == ConsoleKey.S)
+            //{
+            //    previousPos.y -= 1;
+            //    currentPos.y = previousPos.y;
+            //}
+            //else if (_playerInput.Key == ConsoleKey.A)
+            //{
+            //    previousPos.x += 1;
+            //    currentPos.x = previousPos.x;
+            //}
+            //else if (_playerInput.Key == ConsoleKey.D)
+            //{
+            //    previousPos.x -= 1;
+            //    currentPos.x = previousPos.x;
+            //}
         }
 
         public void UpdatePlayer()
@@ -120,6 +177,7 @@ namespace FirstPlayable_GageMcKenzie
 
         public void PlayerHud()
         {
+            Console.SetCursorPosition(0, 39);
             Console.WriteLine($"Player Name: {_name} Health: {base.maxHealth.health} Shield: {base.maxShield.health}  Gold: {money}");
         }
         

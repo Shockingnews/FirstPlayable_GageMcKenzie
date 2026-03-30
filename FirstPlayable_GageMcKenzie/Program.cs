@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using System.Threading;
 
 namespace FirstPlayable_GageMcKenzie
 {
@@ -106,8 +107,11 @@ namespace FirstPlayable_GageMcKenzie
         }
         static void Playing()
         {
+            Console.ReadKey(true);
             borders.AddBorders();
             Draw();
+            Console.SetCursorPosition(0, 0);
+            map.PrintMap();
             while (turns != 0 && player.IsALive() == true )
             {
                 Update();
@@ -137,32 +141,33 @@ namespace FirstPlayable_GageMcKenzie
 
         static void Draw()
         {
-            Console.SetCursorPosition(0, 0);
-            map.PrintMap();
+            //Console.SetCursorPosition(0, 0);
+            //Thread.Sleep(10);
+            //map.PrintMap();
             
             
             gameHud.PlayerHud();
-            gameHud.EnemyHud();
+            //gameHud.EnemyHud();
             borders.DrawBorder();
 
-            for (int i = 0; i < items.Count(); i++)
-            {
-                items[i].PlaceItem();
-                if (items[i].PickedUp == true)
-                {
-                    items.Remove(items[i]);
-                }
+            //for (int i = 0; i < items.Count(); i++)
+            //{
+            //    items[i].PlaceItem();
+            //    if (items[i].PickedUp == true)
+            //    {
+            //        items.Remove(items[i]);
+            //    }
                 
                 
-            }
+            //}
             
             
-            gold.drawMoney();
+            //gold.drawMoney();
             player.DrawPlayer();
-            for (int i = 0; i < enemies.Count(); i++)
-            {
-                enemies[i].DrawEnemy();
-            }
+            //for (int i = 0; i < enemies.Count(); i++)
+            //{
+            //    enemies[i].DrawEnemy();
+            //}
                 
             
 
@@ -178,40 +183,43 @@ namespace FirstPlayable_GageMcKenzie
             
 
             player.UpdatePlayer();
+            map.TilePlacement();
             for (int i = 0; i < enemies.Count(); i++)
             {
                 if (player.currentPos.x == enemies[i]._enemyPos.x && player.currentPos.y == enemies[i]._enemyPos.y)
                 {
                     player.TakeDamage(enemies[i].Damage());
                     player.PreviousPos();
+                    
                     //enemies[i].PrePos();
 
 
                 }
                 map.CheckPos();
-                enemies[i].UpdateEnemy();
+                //enemies[i].UpdateEnemy();
                 
-                if (player.currentPos.x == enemies[i]._enemyPos.x && player.currentPos.y == enemies[i]._enemyPos.y)
-                {
-                    enemies[i].TakeDamage(player.Damage());
-                    enemies[i].PrePos();
-                    player.PreviousPos();
+                //if (player.currentPos.x == enemies[i]._enemyPos.x && player.currentPos.y == enemies[i]._enemyPos.y)
+                //{
+                //    enemies[i].TakeDamage(player.Damage());
+                //    enemies[i].PrePos();
+                //    player.PreviousPos();
+                //    map.TilePlacement();
 
-                }
-                for (int j = 0; j < enemies.Count(); j++)
-                {
-                    if (enemies[i] != enemies[j])
-                    {
-                        if (enemies[j]._enemyPos.x == enemies[i]._enemyPos.x && enemies[j]._enemyPos.y == enemies[i]._enemyPos.y)
-                        {
+                //}
+                //for (int j = 0; j < enemies.Count(); j++)
+                //{
+                //    if (enemies[i] != enemies[j])
+                //    {
+                //        if (enemies[j]._enemyPos.x == enemies[i]._enemyPos.x && enemies[j]._enemyPos.y == enemies[i]._enemyPos.y)
+                //        {
                             
-                            enemies[i].PrePos();
-                            enemies[j].PrePos();
+                //            enemies[i].PrePos();
+                //            enemies[j].PrePos();
 
 
-                        }
-                    }
-                }
+                //        }
+                //    }
+                //}
 
                 //if(enemies[i]._alive == false)
                 //{
@@ -222,7 +230,7 @@ namespace FirstPlayable_GageMcKenzie
 
             player.IsALive();
             turns -= 0;
-            Console.Clear();
+            //Console.Clear();
             
 
 

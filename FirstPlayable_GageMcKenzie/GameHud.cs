@@ -19,6 +19,7 @@ namespace FirstPlayable_GageMcKenzie
         }
         public void PlayerHud()
         {
+            Console.SetCursorPosition(0, 40);
             Console.WriteLine($"Player Name: {_player._name} Health: {_player.maxHealth.health} Shield: {_player.maxShield.health}  Gold: {_player.money}");
         }
 
