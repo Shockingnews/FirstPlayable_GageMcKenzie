@@ -79,7 +79,7 @@ namespace FirstPlayable_GageMcKenzie
                     {
                         Console.ForegroundColor = ConsoleColor.Blue;
                         Console.Write(_newMapData[i][j]);
-                        _border.Add((j + 1, i + 1));
+                        //_border.Add((j + 1, i + 1));
                         Console.ForegroundColor = ConsoleColor.White;
 
                     }
@@ -87,7 +87,7 @@ namespace FirstPlayable_GageMcKenzie
                     {
                         Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.Write(_newMapData[i][j]);
-                        _border.Add((j + 1, i + 1));
+                        //_border.Add((j + 1, i + 1));
                         Console.ForegroundColor = ConsoleColor.White;
 
                     }
@@ -96,7 +96,7 @@ namespace FirstPlayable_GageMcKenzie
                         Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.Write(_newMapData[i][j]);
                         charInMap = _newMapData[i][j];
-                        _damageBorder.Add((j + 1, i + 1));
+                        //_damageBorder.Add((j + 1, i + 1));
 
                         CheckPos();
                         Console.ForegroundColor = ConsoleColor.White;
@@ -108,7 +108,7 @@ namespace FirstPlayable_GageMcKenzie
                         Console.ForegroundColor = ConsoleColor.White;
                         Console.Write(_newMapData[i][j]);
 
-                        _border.Add((j + 1, i + 1));
+                        //_border.Add((j + 1, i + 1));
                     }
                     if (mapPosx == _newMapData.GetLength(0))
                     {
@@ -142,23 +142,22 @@ namespace FirstPlayable_GageMcKenzie
 
         public void TilePlacement()
         {
-            for (int i = 0; i < _newMapData.GetLength(0); i++)
+            
+            Console.SetCursorPosition(_player.previousPos.x, _player.previousPos.y);
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.Write(_newMapData[_player.previousPos.y -1][_player.previousPos.x -1]);
+            for (int i = 0; i < _enemy.Count(); i++)
             {
-                for (int j = 0; j < _newMapData[i].Length; j++)
-                {
-
-                    if (_player.previousPos.x == i && _player.previousPos.y == j)
-                    {
-                        Console.SetCursorPosition(_player.previousPos.x, _player.previousPos.y);
-                        Console.ForegroundColor = ConsoleColor.DarkMagenta;
-                        Console.Write(_newMapData[i][j]);
-                    }
-                }
+                Console.SetCursorPosition(_enemy[i].enemypreviousPos.x, _enemy[i].enemypreviousPos.y);
+                Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                Console.Write(_newMapData[_enemy[i].enemypreviousPos.y+ 1][_enemy[i].enemypreviousPos.x + 1]);
             }
-                
-                    
             
-            
+
+
+
+
+
         }
 
         public void CheckPos()

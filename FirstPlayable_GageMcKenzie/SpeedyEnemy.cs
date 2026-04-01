@@ -49,7 +49,10 @@ namespace FirstPlayable_GageMcKenzie
                         base._enemyPos.y += 1;
 
                         }
-                    
+                    base.enemypreviousPos.x = base._enemyPos.x;
+                    base.enemypreviousPos.y = base._enemyPos.y;
+                    base.UpdatePreviousPos();
+
                 }
                 
             }
@@ -111,6 +114,7 @@ namespace FirstPlayable_GageMcKenzie
 
                 }
             
+
         }
         public override int Damage()
         {

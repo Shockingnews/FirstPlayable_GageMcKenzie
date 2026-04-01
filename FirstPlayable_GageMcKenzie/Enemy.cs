@@ -13,6 +13,7 @@ namespace FirstPlayable_GageMcKenzie
         public string _name;
         
         public Position _enemyPos;
+        public Position enemypreviousPos;
         Player _player;
         public bool _alive = true;
         
@@ -72,7 +73,10 @@ namespace FirstPlayable_GageMcKenzie
                             _enemyPos.y += 1;
 
                         }
-                    
+                    enemypreviousPos.x = _enemyPos.x;
+                    enemypreviousPos.y = _enemyPos.y;
+                    UpdatePreviousPos();
+
                 }
             }
             
@@ -108,9 +112,34 @@ namespace FirstPlayable_GageMcKenzie
             Console.Write(_enemyLogo);
             Console.ForegroundColor = ConsoleColor.White;
         }
+        public void UpdatePreviousPos()
+        {
+            if (_enemyPos.x > _player.currentPos.x)
+            {
+                enemypreviousPos.x -= 1;
+
+
+            }
+            else if (_enemyPos.x < _player.currentPos.x)
+            {
+                enemypreviousPos.x += 1;
+
+            }
+            else if (_enemyPos.y > _player.currentPos.y)
+            {
+                enemypreviousPos.y -= 1;
+
+            }
+            else if (_enemyPos.y < _player.currentPos.y)
+            {
+                enemypreviousPos.y += 1;
+
+            }
+        }
 
         public virtual void PrePos()
         {
+            
             
                 if (_enemyPos.x > _player.currentPos.x)
                 {
@@ -135,6 +164,9 @@ namespace FirstPlayable_GageMcKenzie
 
                 }
             
+            //_enemyPos.x = enemypreviousPos.x;
+            //_enemyPos.y = enemypreviousPos.y;
+
         }
         public virtual int Damage()
         {

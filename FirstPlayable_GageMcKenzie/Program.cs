@@ -147,27 +147,27 @@ namespace FirstPlayable_GageMcKenzie
             
             
             gameHud.PlayerHud();
-            //gameHud.EnemyHud();
+            gameHud.EnemyHud();
             borders.DrawBorder();
 
-            //for (int i = 0; i < items.Count(); i++)
-            //{
-            //    items[i].PlaceItem();
-            //    if (items[i].PickedUp == true)
-            //    {
-            //        items.Remove(items[i]);
-            //    }
+            for (int i = 0; i < items.Count(); i++)
+            {
+                items[i].PlaceItem();
+                if (items[i].PickedUp == true)
+                {
+                    items.Remove(items[i]);
+                }
                 
                 
-            //}
+            }
             
             
-            //gold.drawMoney();
+            gold.drawMoney();
             player.DrawPlayer();
-            //for (int i = 0; i < enemies.Count(); i++)
-            //{
-            //    enemies[i].DrawEnemy();
-            //}
+            for (int i = 0; i < enemies.Count(); i++)
+            {
+                enemies[i].DrawEnemy();
+            }
                 
             
 
@@ -196,35 +196,35 @@ namespace FirstPlayable_GageMcKenzie
 
                 }
                 map.CheckPos();
-                //enemies[i].UpdateEnemy();
+                enemies[i].UpdateEnemy();
                 
-                //if (player.currentPos.x == enemies[i]._enemyPos.x && player.currentPos.y == enemies[i]._enemyPos.y)
-                //{
-                //    enemies[i].TakeDamage(player.Damage());
-                //    enemies[i].PrePos();
-                //    player.PreviousPos();
-                //    map.TilePlacement();
+                if (player.currentPos.x == enemies[i]._enemyPos.x && player.currentPos.y == enemies[i]._enemyPos.y)
+                {
+                    enemies[i].TakeDamage(player.Damage());
+                    enemies[i].PrePos();
+                    player.PreviousPos();
+                    map.TilePlacement();
 
-                //}
-                //for (int j = 0; j < enemies.Count(); j++)
-                //{
-                //    if (enemies[i] != enemies[j])
-                //    {
-                //        if (enemies[j]._enemyPos.x == enemies[i]._enemyPos.x && enemies[j]._enemyPos.y == enemies[i]._enemyPos.y)
-                //        {
+                }
+                for (int j = 0; j < enemies.Count(); j++)
+                {
+                    if (enemies[i] != enemies[j])
+                    {
+                        if (enemies[j]._enemyPos.x == enemies[i]._enemyPos.x && enemies[j]._enemyPos.y == enemies[i]._enemyPos.y)
+                        {
                             
-                //            enemies[i].PrePos();
-                //            enemies[j].PrePos();
+                            enemies[i].PrePos();
+                            enemies[j].PrePos();
 
 
-                //        }
-                //    }
-                //}
+                        }
+                    }
+                }
 
-                //if(enemies[i]._alive == false)
-                //{
-                //    enemies.Remove(enemies[i]);
-                //}
+                if(enemies[i]._alive == false)
+                {
+                    enemies.Remove(enemies[i]);
+                }
             }
             
 
