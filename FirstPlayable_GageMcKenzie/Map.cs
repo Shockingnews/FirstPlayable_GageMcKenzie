@@ -209,8 +209,8 @@ namespace FirstPlayable_GageMcKenzie
                 
                     if (_player.currentPos.y == _damageBorder[i].Item2 && _player.currentPos.x == _damageBorder[i].Item1)
                     {
-                    Console.SetCursorPosition(_damageBorder[i].Item1, _damageBorder[i].Item2);
-                    Console.Write(_newMapData[_damageBorder[i].Item1][_damageBorder[i].Item2]);
+                    //Console.SetCursorPosition(_damageBorder[i].Item1, _damageBorder[i].Item2);
+                    //Console.Write(_newMapData[_damageBorder[i].Item1][_damageBorder[i].Item2]);
                         _player.TakeDamage(10);
                         _player.PreviousPos();
                         
@@ -218,8 +218,8 @@ namespace FirstPlayable_GageMcKenzie
                     for (int j = 0; j < _enemy.Count(); j++) {
                         if (_enemy[j]._enemyPos.y == _damageBorder[i].Item2 && _enemy[j]._enemyPos.x == _damageBorder[i].Item1)
                         {
-                        Console.SetCursorPosition(_damageBorder[i].Item2,_damageBorder[i].Item1);
-                            Console.Write(_newMapData[_damageBorder[i].Item1][_damageBorder[i].Item2]);
+                        //Console.SetCursorPosition(_damageBorder[i].Item2,_damageBorder[i].Item1);
+                        //    Console.Write(_newMapData[_damageBorder[i].Item1][_damageBorder[i].Item2]);
                             _enemy[j].PrePos();
                             _enemy[j].TakeDamage(10);
                             
