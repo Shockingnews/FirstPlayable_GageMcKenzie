@@ -10,6 +10,7 @@ namespace FirstPlayable_GageMcKenzie
     {
         Player _player;
         int _randomMovement;
+        public Position enemypreviousPos;
 
 
 
@@ -57,7 +58,7 @@ namespace FirstPlayable_GageMcKenzie
                     }
                     base.enemypreviousPos.x = base._enemyPos.x;
                     base.enemypreviousPos.y = base._enemyPos.y;
-                    base.UpdatePreviousPos();
+                    UpdatePreviousPos();
 
                 }
 
@@ -140,6 +141,34 @@ namespace FirstPlayable_GageMcKenzie
         public override bool IsAlive()
         {
             return base._alive;
+        }
+
+
+        public override void UpdatePreviousPos()
+        {
+            if (_enemyPos.x > _player.currentPos.x)
+            {
+                enemypreviousPos.x -= 1;
+
+
+            }
+            else if (_enemyPos.x < _player.currentPos.x)
+            {
+                enemypreviousPos.x += 1;
+
+            }
+            else if (_enemyPos.y > _player.currentPos.y)
+            {
+                enemypreviousPos.y -= 1;
+
+            }
+            else if (_enemyPos.y < _player.currentPos.y)
+            {
+                enemypreviousPos.y += 1;
+
+            }
+
+
         }
     }
 }

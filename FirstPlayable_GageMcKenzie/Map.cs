@@ -79,7 +79,7 @@ namespace FirstPlayable_GageMcKenzie
                     {
                         Console.ForegroundColor = ConsoleColor.Blue;
                         Console.Write(_newMapData[i][j]);
-                        //_border.Add((j + 1, i + 1));
+                        _border.Add((j + 1, i + 1));
                         Console.ForegroundColor = ConsoleColor.White;
 
                     }
@@ -87,7 +87,7 @@ namespace FirstPlayable_GageMcKenzie
                     {
                         Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.Write(_newMapData[i][j]);
-                        //_border.Add((j + 1, i + 1));
+                        _border.Add((j + 1, i + 1));
                         Console.ForegroundColor = ConsoleColor.White;
 
                     }
@@ -96,7 +96,7 @@ namespace FirstPlayable_GageMcKenzie
                         Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.Write(_newMapData[i][j]);
                         charInMap = _newMapData[i][j];
-                        //_damageBorder.Add((j + 1, i + 1));
+                        _damageBorder.Add((j + 1, i + 1));
 
                         CheckPos();
                         Console.ForegroundColor = ConsoleColor.White;
@@ -108,7 +108,7 @@ namespace FirstPlayable_GageMcKenzie
                         Console.ForegroundColor = ConsoleColor.White;
                         Console.Write(_newMapData[i][j]);
 
-                        //_border.Add((j + 1, i + 1));
+                        _border.Add((j + 1, i + 1));
                     }
                     if (mapPosx == _newMapData.GetLength(0))
                     {
@@ -144,13 +144,55 @@ namespace FirstPlayable_GageMcKenzie
         {
             
             Console.SetCursorPosition(_player.previousPos.x, _player.previousPos.y);
-            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            if(_newMapData[_player.previousPos.y - 1][_player.previousPos.x - 1] == '~')
+            {
+                Console.ForegroundColor = ConsoleColor.Blue;
+            }
+            if (_newMapData[_player.previousPos.y - 1][_player.previousPos.x - 1] == '^')
+            {
+                Console.ForegroundColor = ConsoleColor.White;
+            }
+            if (_newMapData[_player.previousPos.y - 1][_player.previousPos.x - 1] == '_')
+            {
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+            }
+            if (_newMapData[_player.previousPos.y - 1][_player.previousPos.x - 1] == '*')
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+            }
+            if (_newMapData[_player.previousPos.y - 1][_player.previousPos.x - 1] == '`')
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+            }
+            
             Console.Write(_newMapData[_player.previousPos.y -1][_player.previousPos.x -1]);
+            Console.ForegroundColor = ConsoleColor.White;
             for (int i = 0; i < _enemy.Count(); i++)
             {
-                Console.SetCursorPosition(_enemy[i].enemypreviousPos.x, _enemy[i].enemypreviousPos.y);
-                Console.ForegroundColor = ConsoleColor.DarkMagenta;
-                Console.Write(_newMapData[_enemy[i].enemypreviousPos.y+ 1][_enemy[i].enemypreviousPos.x + 1]);
+                Console.SetCursorPosition(_enemy[i].enemypreviousPos.x , _enemy[i].enemypreviousPos.y );
+                if (_newMapData[_enemy[i].enemypreviousPos.y -1][_enemy[i].enemypreviousPos.x -1] == '~')
+                {
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                }
+                if (_newMapData[_enemy[i].enemypreviousPos.y -1][_enemy[i].enemypreviousPos.x -1] == '^')
+                {
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+                if (_newMapData[_enemy[i].enemypreviousPos.y -1][_enemy[i].enemypreviousPos.x -1] == '_')
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                }
+                if (_newMapData[_enemy[i].enemypreviousPos.y -1][_enemy[i].enemypreviousPos.x -1] == '*')
+                {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                }
+                if (_newMapData[_enemy[i].enemypreviousPos.y -1][_enemy[i].enemypreviousPos.x -1] == '`')
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                }
+                Console.Write(_newMapData[_enemy[i].enemypreviousPos.y -1][_enemy[i].enemypreviousPos.x-1]);
+                //Console.Write('i');
+                Console.ForegroundColor = ConsoleColor.White;
             }
             
 
@@ -167,6 +209,8 @@ namespace FirstPlayable_GageMcKenzie
                 
                     if (_player.currentPos.y == _damageBorder[i].Item2 && _player.currentPos.x == _damageBorder[i].Item1)
                     {
+                    Console.SetCursorPosition(_damageBorder[i].Item1, _damageBorder[i].Item2);
+                    Console.Write(_newMapData[_damageBorder[i].Item1][_damageBorder[i].Item2]);
                         _player.TakeDamage(10);
                         _player.PreviousPos();
                         
@@ -174,6 +218,8 @@ namespace FirstPlayable_GageMcKenzie
                     for (int j = 0; j < _enemy.Count(); j++) {
                         if (_enemy[j]._enemyPos.y == _damageBorder[i].Item2 && _enemy[j]._enemyPos.x == _damageBorder[i].Item1)
                         {
+                        Console.SetCursorPosition(_damageBorder[i].Item2,_damageBorder[i].Item1);
+                            Console.Write(_newMapData[_damageBorder[i].Item1][_damageBorder[i].Item2]);
                             _enemy[j].PrePos();
                             _enemy[j].TakeDamage(10);
                             

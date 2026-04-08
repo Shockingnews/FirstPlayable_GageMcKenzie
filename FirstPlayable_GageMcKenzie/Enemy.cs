@@ -42,6 +42,9 @@ namespace FirstPlayable_GageMcKenzie
 
             startingHealth = maxHealth;
 
+            enemypreviousPos.x = _enemyPos.x;
+            enemypreviousPos.y = _enemyPos.y;
+
         }
 
         public virtual void Move()
@@ -112,27 +115,27 @@ namespace FirstPlayable_GageMcKenzie
             Console.Write(_enemyLogo);
             Console.ForegroundColor = ConsoleColor.White;
         }
-        public void UpdatePreviousPos()
+        public virtual void UpdatePreviousPos()
         {
             if (_enemyPos.x > _player.currentPos.x)
             {
-                enemypreviousPos.x -= 1;
+                enemypreviousPos.x += 1;
 
 
             }
             else if (_enemyPos.x < _player.currentPos.x)
             {
-                enemypreviousPos.x += 1;
+                enemypreviousPos.x -= 1;
 
             }
             else if (_enemyPos.y > _player.currentPos.y)
             {
-                enemypreviousPos.y -= 1;
+                enemypreviousPos.y += 1;
 
             }
             else if (_enemyPos.y < _player.currentPos.y)
             {
-                enemypreviousPos.y += 1;
+                enemypreviousPos.y -= 1;
 
             }
         }
@@ -141,31 +144,31 @@ namespace FirstPlayable_GageMcKenzie
         {
             
             
-                if (_enemyPos.x > _player.currentPos.x)
-                {
-                    _enemyPos.x += 1;
+                //if (_enemyPos.x > _player.currentPos.x)
+                //{
+                //    _enemyPos.x += 1;
 
-                }
-                else if (_enemyPos.x < _player.currentPos.x)
-                {
-                    _enemyPos.x -= 1;
+                //}
+                //else if (_enemyPos.x < _player.currentPos.x)
+                //{
+                //    _enemyPos.x -= 1;
 
-                }
+                //}
             
             
-                if (_enemyPos.y > _player.currentPos.y)
-                {
-                    _enemyPos.y += 1;
+                //if (_enemyPos.y > _player.currentPos.y)
+                //{
+                //    _enemyPos.y += 1;
 
-                }
-                else if (_enemyPos.y < _player.currentPos.y)
-                {
-                    _enemyPos.y -= 1;
+                //}
+                //else if (_enemyPos.y < _player.currentPos.y)
+                //{
+                //    _enemyPos.y -= 1;
 
-                }
+                //}
             
-            //_enemyPos.x = enemypreviousPos.x;
-            //_enemyPos.y = enemypreviousPos.y;
+            _enemyPos.x = enemypreviousPos.x;
+            _enemyPos.y = enemypreviousPos.y;
 
         }
         public virtual int Damage()

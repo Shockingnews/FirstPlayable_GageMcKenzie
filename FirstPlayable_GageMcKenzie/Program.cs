@@ -186,6 +186,8 @@ namespace FirstPlayable_GageMcKenzie
             map.TilePlacement();
             for (int i = 0; i < enemies.Count(); i++)
             {
+                
+
                 if (player.currentPos.x == enemies[i]._enemyPos.x && player.currentPos.y == enemies[i]._enemyPos.y)
                 {
                     player.TakeDamage(enemies[i].Damage());
@@ -195,9 +197,8 @@ namespace FirstPlayable_GageMcKenzie
 
 
                 }
-                map.CheckPos();
                 enemies[i].UpdateEnemy();
-                
+
                 if (player.currentPos.x == enemies[i]._enemyPos.x && player.currentPos.y == enemies[i]._enemyPos.y)
                 {
                     enemies[i].TakeDamage(player.Damage());
@@ -206,6 +207,8 @@ namespace FirstPlayable_GageMcKenzie
                     map.TilePlacement();
 
                 }
+                map.CheckPos();
+                
                 for (int j = 0; j < enemies.Count(); j++)
                 {
                     if (enemies[i] != enemies[j])
