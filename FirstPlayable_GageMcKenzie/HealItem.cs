@@ -26,6 +26,8 @@ namespace FirstPlayable_GageMcKenzie
 
         public override void OnPickUp()
         {
+            Console.SetCursorPosition(0, 41);
+            Console.Write("You picked up a Health");
             base.OnPickUp();
             _player.maxHealth.health += 1;
             _player.PreviousPos();

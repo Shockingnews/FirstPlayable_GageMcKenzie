@@ -38,6 +38,8 @@ namespace FirstPlayable_GageMcKenzie
 
                     if (_player.currentPos.x == _moneyPos.x && _player.currentPos.y == _moneyPos.y)
                     {
+                        Console.SetCursorPosition(0, 41);
+                        Console.Write("You picked up a Gold");
                         _player.money += gold;
                         PickedUp[i] = true;
                         _player.PreviousPos();

@@ -85,6 +85,7 @@ namespace FirstPlayable_GageMcKenzie
         static Map map = new Map(player, enemies);
         static void Main(string[] args)
         {
+            
 
             Console.SetWindowSize(Console.LargestWindowWidth, Console.LargestWindowHeight);
 
@@ -99,8 +100,10 @@ namespace FirstPlayable_GageMcKenzie
             }
             else { Console.WriteLine("You Win"); }
             
-
+            
             Console.ReadKey(true);
+            
+            
 
             Console.Clear();
 

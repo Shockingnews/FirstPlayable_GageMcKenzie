@@ -24,6 +24,8 @@ namespace FirstPlayable_GageMcKenzie
 
         public override void OnPickUp()
         {
+            Console.SetCursorPosition(0, 41);
+            Console.Write("You picked up a Key");
             base.OnPickUp();
             _borders.borders.Remove((20, 20,"Left"));
         }

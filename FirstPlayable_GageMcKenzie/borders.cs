@@ -37,10 +37,14 @@ namespace FirstPlayable_GageMcKenzie
                 }
                 if( _enmies != null)
                 {
-                    if (_enmies[0]._enemyPos.x == borders[0].Item1 && _enmies[0]._enemyPos.y == borders[0].Item2)
+                    for (int i = 0; i < _enmies.Count(); i++)
                     {
-                        _enmies[0].PrePos();
+                        if (_enmies[i]._enemyPos.x == borders[0].Item1 && _enmies[i]._enemyPos.y == borders[i].Item2)
+                        {
+                            _enmies[i].PrePos();
+                        }
                     }
+                        
                 }
 
                 
@@ -57,10 +61,12 @@ namespace FirstPlayable_GageMcKenzie
                     Console.SetCursorPosition(borders[i].Item1, borders[i].Item2);
                     if (borders[i].Item3 == "Left")
                     {
+                        Console.ForegroundColor = ConsoleColor.DarkYellow;
                         Console.Write(LeftBorder());
                     }
                     else
                     {
+                        Console.ForegroundColor = ConsoleColor.DarkYellow;
                         Console.Write(TopBorder());
                     }
                 }

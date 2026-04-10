@@ -25,6 +25,8 @@ namespace FirstPlayable_GageMcKenzie
         }
         public override void OnPickUp()
         {
+            Console.SetCursorPosition(0, 41);
+            Console.Write("You picked up a Shield");
             _player.maxShield.health += 1;
             _player.PreviousPos();
             base.OnPickUp();
